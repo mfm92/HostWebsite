@@ -1,4 +1,5 @@
 import { AnimatedBackground, usePerformanceMonitor } from 'animated-backgrounds';
+import { useEffect } from 'react';
 
 // Example data structure with a "group" property
 const entries = [
@@ -150,6 +151,10 @@ export default function App() {
   const pq2 = entries.filter(e => e.group === "pq2");
 
   const performance = usePerformanceMonitor();
+
+  useEffect(() => {
+    document.title = "NSC 242";
+  }, []);
 
   return (
     <div>

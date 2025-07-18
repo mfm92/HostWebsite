@@ -54,6 +54,12 @@ const entries = [
   },
   {
     nation: "Netherlands"
+  },
+  {
+    nation: "Belgium",
+    artist: "Stromae",
+    song: "Papaoutai",
+    order: 7,
   }
   // Add more entries as needed...
 ];

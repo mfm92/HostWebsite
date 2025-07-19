@@ -8,14 +8,17 @@ export default function TitleBanner() {
       </h1>
       <div className="max-w-xl w-full mx-auto text-center text-lg bg-gray-900/95 p-6 rounded-xl shadow-lg border-t-4 border-b-4 border-orange-400 animate-pulse transition-shadow hover:shadow-2xl">
         <p className="text-orange-400">
-          Send your entry until <b className="text-orange-200">July 27 (end of day, CEST)</b>* to participate.
+          Send your entry until <b className="text-white">July 27 (end of day, CEST)</b>* to participate.
+          <br />
+          <span className="text-white text-sm">
+            *Deadline could be pushed back if the forum is lagging again.
+          </span>
+          <br />
           <br />
           Send your entry either to <a href="https://www.escunited.com"
               className="text-white underline">@pjelacki</a> on ESCunited.com or to @mfmo92 on Discord.
           <br />
-          <span className="text-orange-100 text-sm">
-            *Deadline could be pushed back if the forum is lagging again.
-          </span>
+          <div className="text-sm text-white">Consider sending your entry to the NSC Host Helper on escunited.com as well.</div>
         </p>  
       </div>
     </section>

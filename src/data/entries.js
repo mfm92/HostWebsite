@@ -30,7 +30,7 @@ const entries = [
   { nation: "Kordavian Islands", participating: false },
   { nation: "Marcobia", participating: true },
   { nation: "MatiMati", participating: false },
-  { nation: "New Acadia", participating: false },
+  { nation: "New Acadia", participating: true },
   { nation: "New Bander State", participating: false },
   { nation: "Öösingimäed", participating: false },
   { nation: "Papendink", participating: false },

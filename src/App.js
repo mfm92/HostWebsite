@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import Section from "./components/Section";
-import DonationBanner from "./components/DonationBanner";
 import { AnimatedBackground, usePerformanceMonitor } from "animated-backgrounds";
 import { entries } from "./data/entries";
 import TabButton from "./components/TabButton"; // Import the TabButton component
 import TitleBanner from "./components/TitleBanner";
 import AnimatedVoteDisplay from "./components/AnimatedVoteDisplay";
 import DiscordInviteLink from "./components/DiscordInviteLink";
+import IntermittentBanner from "./components/IntermittentBanner";
 
 export default function App() {
   const semi1 = entries.filter((e) => e.group === "semi1");
@@ -41,6 +41,7 @@ export default function App() {
           }}
         />
         <TitleBanner/>
+        <DiscordInviteLink />
         <div className="flex flex-wrap gap-2 justify-center mb-6 mt-6">
           {tabs.map(tab => (
             <TabButton
@@ -66,7 +67,7 @@ export default function App() {
           <span className="underline">@pjelacki</span> or via Discord to{" "}
           <span className="underline">mfmo92</span>
         </div>
-        <DonationBanner />
+        <IntermittentBanner />
       </main>
     </div>
   );

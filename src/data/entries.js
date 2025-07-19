@@ -14,7 +14,7 @@ const entries = [
   { nation: "Cydoni-Gibberia", participating: false },
   { nation: "Dalisska", participating: false },
   { nation: "Doire", participating: false },
-  { nation: "Dwyforland", participating: false },
+  { nation: "Dwyforland", participating: true },
   { nation: "Emsfrynt", participating: true, reserve: true },
   { nation: "Endórë", participating: false },
   { nation: "Federal Republic of Meridia", participating: false },

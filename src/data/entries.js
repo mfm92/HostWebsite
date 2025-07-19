@@ -39,7 +39,7 @@ const entries = [
   { nation: "Redwood Republic", participating: false },
   { nation: "Rehi Kaita", participating: false },
   { nation: "Reym-L-Dneurb", participating: false },
-  { nation: "Roseland", participating: false },
+  { nation: "Roseland", participating: true },
   { nation: "Roxma Nova", participating: false },
   { nation: "Rumia", participating: false },
   { nation: "Sakuralia", participating: true },

@@ -19,6 +19,24 @@ export default function TitleBanner() {
               className="text-white underline">@pjelacki</a> on ESCunited.com or to @mfmo92 on Discord.
           <br />
           <div className="text-sm text-white">Consider sending your entry to the NSC Host Helper on escunited.com as well.</div>
+          <br />
+          <div className="text-orange text-sm">
+            Please check if your entry has been submitted before.
+            <a
+              href="https://nscstats.com/"
+              className="bg-orange-600/75 text-white font-bold py-2 px-3 rounded inline-flex items-center mt-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Check the NSC Database! </span>
+              <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2"
+                viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round"
+                  d="M14 3h7m0 0v7m0-7L10 14"></path>
+              </svg>
+            </a>
+          </div>
+
         </p>  
       </div>
     </section>

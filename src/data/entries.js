@@ -55,7 +55,7 @@ const entries = [
   { nation: "United Kingdom of Destrion", participating: false },
   { nation: "Vermilion", participating: false },
   { nation: "Vylkuzeme", participating: false },
-  { nation: "Waiting Iist of Shelley & Nici", participating: false },
+  { nation: "Waiting Iist of Shelley & Nici", participating: true },
   { nation: "Xhuxhmaxhuxh", participating: false },
   { nation: "Xochimilia", participating: false },
   { nation: "Yaponesia", participating: false },

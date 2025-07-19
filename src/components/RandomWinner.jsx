@@ -27,8 +27,8 @@ const RandomWinner = () => {
   }, []);
 
   return (
-    <div className="winner-container w-full text-center">
-        Enjoy a slide show of past NSC winners!
+    <div className="bg-gradient-to-r from-orange-900/70 to-black-500/70 p-4 rounded-lg shadow-lg text-center">
+        ... trip down memory lane with a random NSC winner!
         {currentWinner && (
         <div className={`winner-fade ${isVisible ? 'visible' : ''}`}>
             <p className="flex flex-wrap justify-center gap-1 whitespace-nowrap text-sm">

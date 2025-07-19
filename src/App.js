@@ -6,6 +6,7 @@ import { entries } from "./data/entries";
 import TabButton from "./components/TabButton"; // Import the TabButton component
 import TitleBanner from "./components/TitleBanner";
 import AnimatedVoteDisplay from "./components/AnimatedVoteDisplay";
+import DiscordInviteLink from "./components/DiscordInviteLink";
 
 export default function App() {
   const semi1 = entries.filter((e) => e.group === "semi1");
@@ -40,6 +41,7 @@ export default function App() {
           }}
         />
         <TitleBanner/>
+        <DiscordInviteLink />
         <div className="flex flex-wrap gap-2 justify-center mb-6 mt-6">
           {tabs.map(tab => (
             <TabButton

@@ -1,0 +1,240 @@
+NSC 1+Arjastan+Belén Arjona+No Habrá Más Perdón+40+2+1
+NSC 2+Escotia+Natasha Bedingfield+Unwritten+108+2+27
+NSC 3+Arjastan (2)+Tata Young+Sexy Naughty Bitchy+83+1+6
+NSC 4+Hibernia+Youssou N'Dour & Neneh Cherry+7 Seconds+84+2+1
+NSC 5+Bokia+Lana i Luka+Prava Ljubav+181+10+73
+NSC 6+Lolee+Velvet+Fix Me+135+6+2
+NSC 7+Gabriel+Vanessa Amorosi+Absolutely Everybody+181+4+15
+NSC 8+Astoria+Kelly Clarkson+Behind These Hazel Eyes+157+3+32
+NSC 9+Alinta+Evanescence+My Immortal+151+4+19
+NSC 10+Astoria (2)+Mecano+Hijo De La Luna+182+5+43
+NSC 11+Spila+Anastacia+Left Outside Alone+145+3+8
+NSC 12+Vorhota+Mylène Farmer+C'est une belle journée+183+4+11
+NSC 13+Gabriel (2)+Maroon 5+Wake Up Call+160+4+5
+NSC 14+Scorpionia+Crystal+Hiv A Vegtelen+216+7+14
+NSC 15+Prasia+Sertab Erener+Here I Am+170+2+9
+NSC 16+Calypso+Bhangra+My Own Way+179+4+18
+NSC 17+Eurora+Cascada+What Hurts the Most+154+4+23
+NSC 18+Prasia (2)+Loona+Rhythm of the Night+182+4+8
+NSC 19+Ugaly+Globus+Europa+155+5+1
+NSC 20+Alinta (2)+Nami Tamaki+Raason+170+6+10
+NSC 21+Jastistia+Da Buzz+Dangerous+187+2+16
+NSC 22+Maccha-Brugia+Cobra Starship+The City Is at War+180+5+32
+NSC 23+Maccha-Brugia (2)+Crazy Loop+Mm Ma Ma+208+7+14
+NSC 24+Vorhota (2)+Benassi Bros.+Hit My Heart+169+5+10
+NSC 25+Belvist+Siddharta+Insane+245+6+31
+NSC 26+Prasia (3)+Kate Voegele+Only Fooling Myself+184+2+12
+NSC 27+Spila (2)+Amy Macdonald+This Is the Life+239+8+26
+NSC 28+Noizeland+Mega Mindy+Mega Mindy Tijd+225+8+51
+NSC 29+Scorpionia (2)+Lara Fabian+I Will Love Again+198+2+18
+NSC 30+Tohru+Jenifer+Si c'est une île+219+3+27
+NSC 31+St. Lotus+Polarkreis 18+Allein Allein+203+7+24
+NSC 32+Begonia+Lauri Tähkä+Pauhaava sydän+167+5+1
+NSC 33+Vorhota (3)+Laura Pausini+Surrender+203+	1
+NSC 34+Swelatie+Kelly Clarkson+My Life Would Suck Without You+183+	8
+NSC 35+Prasia (4)+Sash! feat. Stunt+Raindrops (Encore une fois)+202+	10
+NSC 36+Belvist (2)+Keane+Crystal Ball+182+	9
+NSC 37+Reym-L-Dneurb+Goldfrapp+Strict Machine+172+	3
+NSC 38+Bokia (2)+Freemasons feat. Sophie Ellis-Bextor+Heartbreak Make Me a Dancer+213+	8
+NSC 39+Canedonia+Jennifer Lopez+Ain't It Funny+168+4+1
+NSC 40+Zaprya+Armin van Buuren feat. Sharon den Adel+In and Out of Love+166+3+1
+NSC 41+Vorhota (4)+Lily Allen+Fuck You+161+1+3
+NSC 42+Vegetaria+Space Cowboy+Falling Down+206+6+20
+NSC 43+Scorpionia (3)+Vanilla Ninja+Blue Tattoo+177+	2
+NSC 44+Scorpionia (4)+Ani Lorak+I'm Alive+165+4+18
+NSC 45+Spila (3)+Lady Gaga+Bad Romance+190+7+13
+NSC 46+Reignland+Brown Eyed Girls+Abracadabra+153+1+9
+NSC 47+Aleksandrija+Within Temptation+Stand My Ground+189+7+15
+NSC 48+Ecclestonia+Muse+Uprising+154+2+18
+NSC 49+Bokia (3)+Cheryl Cole+Parachute+188+5+39
+NSC 50+Halito+Hot Chelle Rae+I Like to Dance+157+4+27
+NSC 51+Scorpionia (5)+Eric Saade+Sleepless+193+2+14
+NSC 52+Zechonia+Katie Melua+The Flood+217+8+85
+NSC 53+Greenfroze+K'naan feat. David Bisbal+Wavin' Flag+139+4+4
+NSC 54+Calypso (2)+Peter Luts+The Rain+155+0+6
+NSC 55+Zaprya (2)+Monrose+Like a Lady+173+2+24
+NSC 56+Pigeon Island+Christina Rus+I Don't See Ya+136+1+0
+NSC 57+Serenate & Clair+BoA+Hurricane Venus+190+8+27
+NSC 58+Viola Per Sempre+Christina Perri+Jar of Hearts+248+12+89
+NSC 59+Pigeon Island (2)+Lenka+Trouble is a Friend+167+4+14
+NSC 60+Berceniland+Magazin+Sijamski blizanci+162+5+8
+NSC 61+Zaprya (3)+Nicole Scherzinger+Poison+199+8+39
+NSC 62+Akkåville+Caro Emerald+That Man+183+3+32
+NSC 63+Pigeon Island (3)+Ingrid Michaelson+Maybe+157+2+2
+NSC 64+Ugaly (2)+Brandi Carlile+Dreams+183+5+6
+NSC 65+Tohru (2)+Nolwenn Leroy+Tri Martolod+201+4+31
+NSC 66+Cydoni-Gibberia+The Naked and Famous+Punching in a Dream+207+2+8
+NSC 67+Calypso (3)+Nathalie Giannitrapani+Vivo Sospesa+225+9+59
+NSC 68+Noizeland (2)+Super Czerny+Queen of Queer+180+6+3
+NSC 69+Mooseland+Adele+Someone Like You+236+8+19
+NSC 70+Greenfroze (2)+Philter+Revolver+195+3+8
+NSC 71+Tír an Abhainn+Edward Sharpe & the Magnetic Zeros+Home+165+7+1
+NSC 72+Ugaly (3)+Evelyn Evelyn+Evelyn Evelyn+185+6+26
+NSC 73+Bacchus+The Saturdays+All Fired Up+191+6+17
+NSC 74+Roseland+Jakalope+Witness+196+3+21
+NSC 75+Xhanostania+Greip+Vihma loits+212+6+20
+NSC 76+Doire+King Charles+Mississippi Isabel+213+9+26
+NSC 77+Kostanovia+Lana Del Rey+Born to Die+217+7+6
+NSC 78+Pigeon Island (4)+Gemma Copas+Invisible+200+3+4
+NSC 79+10 Regions of Mobius+Of Monsters and Men+Little Talks+252+11+57
+NSC 80+Waloria+Laleh+Some Die Young+201+6+8
+NSC 81+Cydoni-Gibberia (2)+Capital Cities+Safe and Sound+214+4+14
+NSC 82+Zechonia (2)+Ronya+Hyperventilating+223+7+34
+NSC 83+Paperland+SomethingALaMode feat. Karl Lagerfeld+Rondo Parisiano+193+3+12
+NSC 84+Bacchus (2)+Woodkid+Run Boy Run+212+7+18
+NSC 85+Doire (2)+San Cisco+Awkward+180+1+5
+NSC 86+Llama Republic+The Storm+Raver+176+5+14
+NSC 87+Pigeon Island (5)+Hampenberg feat. Jesper Nohrstedt+Glorious+219+5+39
+NSC 88+Rumia+Fiddler's Green+Yindy+260+6+83
+NSC 89+U.E.H. Prasia & Xanadu+Khaled+C'est la vie+225+6+25
+NSC 90+Waloria (2)+Tangerine Kitty+Dumb Ways to Die+200+5+18
+NSC 91+Sunland+Krewella+Alive+184+1+22
+NSC 92+Zechonia (3)+Phildel+Stormsong+179+5+5
+NSC 93+Waloria (3)+Zedd feat. Foxes+Clarity+205+4+8
+NSC 94+Paperland (2)+Potap i Nastya+Chumachechaya Vesna+214+8+38
+NSC 95+Prasia (6)+Various Artists+Welcome to Racha!+210+8+54
+NSC 96+Serenate & Clair (2)+Florrie+Shot You Down+162+6+2
+NSC 97+Zombira+Laleh+Vårens första dag+157+1+11
+NSC 98+Horehronieland+Les Ramoneurs de Menhirs+Menez Daou+202+6+7
+NSC 99+Illumia+Alida+Feathers+199+4+17
+NSC 100+Anselmsmumonia+Pixie Paris+Ich lieb dich nicht immer+189+3+18
+NSC 101+Zumkotzen+London Grammar+Strong+206+6+10
+NSC 102+Pigeon Island (6)+Laleh+Colors+215+4+3
+NSC 103+Ugaly (4)+Ugaly+Ugaly+223+11+62
+NSC 104+Rumia (2)+The Hillbilly Moon Explosion+My Love for Evermore+190+2+5
+NSC 105+Waloria (4)+Clean Bandit feat. Jess Glynne+Rather Be+185+3+18
+NSC 106+Carpatina+Indila+Dernière danse+229+5+19
+NSC 107+Pigeon Island (7)+Oonagh+Gäa+210+5+45
+NSC 108+Noizeland (3)+Daan+La Crise+188+6+33
+NSC 109+Cherniya+Anna Rossinelli+Shine in the Light+203+7+49
+NSC 110+Zechonia (4)+Tuomas Holopainen+The Last Sled+168+4+18
+NSC 111+Paperland (3)+Ibeyi+Oya+198+7+5
+NSC 112+Horehronieland (2)+Kesh You+Rizamyn+186+6+1
+NSC 113+Eterland+Years & Years+Take Shelter+192+?+6
+NSC 114+Anselmsmumonia (2)+Mirel Wagner+No Death+196+3+8
+NSC 115+New Acadia+The Family Crest+North+230+10+5
+NSC 116+Noizeland (4)+Folkestone+In Caduta Libera+181+5+12
+NSC 117+Luxona+AronChupa+I'm an Albatraoz+181+4+17
+NSC 118+SR Indiria+Stockholm Syndrome+Kalabalik+199+?+18
+NSC 119+Illumia (2)+Fjokra+Get Amongst It+171+3+5
+NSC 120+Srivijaya & Sasentia+ONE OK ROCK+Mighty Long Fall+164+4+5
+NSC 121+Dalisska+San Fermin+Jackrabbit+216+5+10
+NSC 122+Rumia (3)+Eluveitie+Call of the Mountains+177+5+4
+NSC 123+Waloria (5)+Hurricane Love+Nowhere to Go+192+1+6
+NSC 124+Doire (3)+Wohnout+Gastrosexual+175+9+6
+NSC 125+Paper & INK (4)+Bear's Den+Above the Clouds of Pompeii+153+3+1
+NSC 126+Ujedinjeni Gvozd+Nina Kraljić+Zaljuljali Smo Svijet+213+7+36
+NSC 127+Balearica Island+S3RL feat. Lexi+Genre Police+166+4+2
+NSC 128+Pebbleland+Disclosure feat. Lorde+Magnets+175+5+0
+NSC 129+Hypjø (3)+Susanne Sundfør+Accelerate+226+7+37
+NSC 130+Balearica Island (2)+Giorgio Moroder feat. Britney Spears+Tom's Diner+206+5+26
+NSC 131+Viola Per Sempre (2)+Filous feat. Jordan Leser+Shaded In+180+2+8
+NSC 132+Hypjø (4)+Purity Ring+Begin Again+237+7+44
+NSC 133+Calypso (4)+Dua Lipa+Last Dance+198+5+32
+NSC 134+Emsfrynt (2)+Broods+Free+180+4+6
+NSC 135+Halito (2)+Lillix+Sweet Temptation+185+4+19
+NSC 136+Waiting Iist of Shelley & Nici (3)+Onuka+1986+229+8+48
+NSC 137+Rumia (4)+Paddy and the Rats+My Sharona+183+2+2
+NSC 138+Perryfornia+Eivør+Í Tokuni+224+6+36
+NSC 139+Aimūlli+Susanne Sundfør+Kamikaze+197+4+6
+NSC 140+Ujedinjeni Gvozd (2)+Sallan ja Miron matka maailman ympäri+Rakastat Mua Paremmin+185+3+4
+NSC 141+Fervorosia+Feder feat. Alex Aiono+Lordly+182+5+25
+NSC 142+Perryfornia (2)+CHVRCHES+Bury It+192+3+7
+NSC 143+Begonia (2)+Huntza+Aldapan Gora+235+2+33
+NSC 144+Waloria (6)+Smith & Thell+Row+180+5+4
+NSC 145+Pigeon Island (8)+Lorde+Green Light+218+7+23
+NSC 146+Lacrea+Sin Fang, Sóley & Örvar Smárason+Random Haiku Generator+182+5+11
+NSC 147+Noizeland (5)+Susumu Hirasawa+Parade+195+4+5
+NSC 148+Hypjø (5)+ionnalee+Not Human+172+2+24
+NSC 149+Reym-L-Dneurb (2)+The Pirouettes+L'escalier+212+5+34
+NSC 150+Luzinia+ANDRRA+Palinë+203+5+4
+NSC 151+Emsfrynt (3)+Kanykei+Kuurchak+199+8+3
+NSC 152+Calypso (5)+Cosmo Sheldrake+Come Along+243+7+63
+NSC 153+Lukeland+Sigrid+Strangers+180+2+16
+NSC 154+Papendink (5)+Ye Banished Privateers+Annabel+189+5+37
+NSC 155+Moisantia+Namewee feat. Meu Ninomiya+Makudonarudo+190+4+18
+NSC 156+Uferbruht+Beach House+Space Song+187+4+23
+NSC 157+Blackmere+Talos+Odyssey+179+4+13
+NSC 158+Aimūlli (2)+Evgeniya Sotnikova+Uletay Na Krilyah Vetra+171+3+1
+NSC 159+Luzinia (2)+Meg Myers+Numb+187+5+15
+NSC 160+Kadis+Gaby Moreno+El Sombreron+184+4+14
+NSC 161+Noizeland (6)+Paloma Del Cerro feat. Miss Bolivia+Para Todas Las Mamitas del Mundo+185+2+4
+NSC 162+New Bander State+Arnór Dan+Stone by Stone+186+3+1
+NSC 163+Uferbruht (2)+Bears of Legend+When I Saved You from the Sea+150+1+0
+NSC 164+Emsfrynt (4)+Charli XCX & Troye Sivan+1999+186+5+22
+NSC 165+Hypjø (6)+Grimes+We Appreciate Power+189+5+13
+NSC 166+Insomnéa (2)+Blanco White+Colder Heavens+199+4+4
+NSC 167+Hypjø (7)+Rein+Electric+191+3+45
+NSC 168+Solentoya+Faruk Sabanic & Maruv+For You+175+7+19
+NSC 169+Aimūlli (3)+Marie Laforêt+Ivan, Boris et moi+164+3+3
+NSC 170+Emsfrynt (5)+Junior Brielle+Love+195+5+11
+NSC 171+Rahasia-Diati+Canine+Bienveillance+174+4+23
+NSC 172+Kimmystan+Lola Marsh+Echoes+200+2+46
+NSC 173+Serenes+PUPU+Wandering Wonderer+173+2+6
+NSC 174+Jemmuise+Kayah & Atanas Valkov+Czarna Polana+203+4+19
+NSC 175+Jemmuise (2)+Winona Oak+Let Me Know+167+3+3
+NSC 176+Kordavian Islands+Kwiat Jabłoni feat. Bum Bum Orkestar+Idzie zima+157+5+14
+NSC 177+Doire (4)+Oscar Scheller feat. PAWWS+Interstellar Disco+209+8+4
+NSC 178+Emsfrynt (6)+Gåte+Kom No Disjka+188+4+2
+NSC 179+Tanoiro+Dreamcatcher+Scream+163+1+10
+NSC 180+Sundfør+KAZKA+Palala+181+1+8
+NSC 181+Fervorosia (2)+Cream Soda & Hleb+Plachu Na Techno+180+3+19
+NSC 182+Kordavian Islands (2)+Klô Pelgag+La maison jaune+177+3+1
+NSC 183+Kadis (2)+Aly & AJ+Joan of Arc on the Dance Floor+225+9+46
+NSC 184+Ujedinjeni Gvozd (3)+Pomni Imya Svoe+To, chto ya dolzhyen skazat'+194+5+28
+NSC 185+Doire (5)+M. Bulteau+Boneklezmer+174+3+6
+NSC 186+Tuzi+Danica Crnogorčević+Veseli se srpski rode+180+8+4
+NSC 187+Biflovatia+Elderbrook+Numb+186+5+32
+NSC 188+Lacrea (2)+Chica Sobresalto+Fusión del Núcleo+184+2+17
+NSC 189+New Bander State (2)+The Lathums+Foolish Parley+180+7+5
+NSC 190+Doire (6)+Seo Linn+Ar Scáth a Chéile+196+4+22
+NSC 191+Begonia (3)+The Half feat. Bahar+Shablon Sevgi+205+3+5
+NSC 192+Belvist (3)+Blackbriar+Arms of the Ocean+214+7+49
+NSC 193+Cydoni-Gibberia (3)+Carson Coma+Pók+239+9+17
+NSC 194+Serenes (2)+Polo & Pan+Ani Kuni+197+4+30
+NSC 195+Rahasia-Diati (2)+Jadudah+Love You (When You're a Mess)+257+7+90
+NSC 196+Vylkuzeme+Dzivia+Flower Maiden+194+7+7
+NSC 197+Emsfrynt (7)+Alba August+Killing Time+171+1+21
+NSC 198+New Bander State (3)+BLACKBOOK+Slowlove+189+4+10
+NSC 199+Ic-Sa-Calli+Elin Bell+Over and Out+206+4+43
+NSC 200+Comino+White Lies+As I Try Not To Fall Apart+176+2+14
+NSC 201+Aimūlli (4)+Mike Oldfield+To France+240+4+55
+NSC 202+Tír an Abhainn (2)+Froukje+Groter Dan Ik+193+3+18
+NSC 203+Ugaly (5)+Ragnar Roffbeard+Anthem of Roffbeard the Mighty+234+10+65
+NSC 204+Sundfør (2)+KAZKA+I Am Not OK+181+5+0
+NSC 205+Svobodnia+Purple Disco Machine & Sophie and the Giants+In the Dark+170+3+12
+NSC 206+Ugaly (6)+Night Club+Die in the Disco+162+2+9
+NSC 207+Tamausia & Deltannor+Harmonija Disonance+Zima+212+3+28
+NSC 208+Tcher-Racoi+Stereopolina+Posledneye svidaniye+163+2+6
+NSC 209+Šilček (8)+Confidence Man+Holiday+230+5+64
+NSC 210+Orangualia+Fish in a Birdcage+Rule #4 - Fish in a Birdcage+165+3+3
+NSC 211+Mormadorei+Yeah Yeah Yeahs+Wolf+179+5+12
+NSC 212+New Acadia (2)+Daisy the Great & AJR+Record Player+208+5+47
+NSC 213+Kadis (3)+Kali Mutsa+HaYaKo HaYaKo+185+6+8
+NSC 214+Balearica Island (3)+Billx & Otyken+My Wing (Rave Music Edit)+196+3+9
+NSC 215+Kadis (4)+Expresso Transatlântico feat. Conan Osíris+Barquinha+195+4+8
+NSC 216+New Acadia (3)+Zaho de Sagazan+Tristesse+180+5+22
+NSC 217+Tír an Abhainn (3)+Witchz+The Magick+194+5+24
+NSC 218+Šilček (9)+Kylie Minogue+Padam Padam+206+6+30
+NSC 219+Halito (3)+Emei+That Girl+230+4+1
+NSC 220+Griffin Empire+Troye Sivan+Rush+175+5+7
+NSC 221+EchseNam+slowshift feat. Fay Wildhagen & Kristian Kristensen+EndUp+181+3+12
+NSC 222+Tcher-Racoi (2)+The Kiffness x Lonely Cat+Sometimes I'm Alone (Singing Cat)+196+6+2
+NSC 223+New Bander State (4)+Fat Dog+King of the Slugs+204+7+47
+NSC 224+Aimūlli (5)+Hrdza+Horela ľipka+173+6+5
+NSC 225+Halito (4)+mehro+exploding+213+6+28
+NSC 226+Kordavian Islands (3)+Die Arkitekt feat. Lena Platonos+Mirkhel+200+5+27
+NSC 227+Xochimilia+ZETAK & Fillas de Cassandra+ANGULEELE+181+4+5
+NSC 228+Waiting Iist of Shelley & Nici (4)+Artem Pivovarov & Klavdia Petrivna+Baraban+177+4+3
+NSC 229+Illumia (3)+Kabin Crew & Lisdoonvarna Crew+The Spark+178+6+6
+NSC 230+Orangualia (2)+Walter Astral+Mirage+214+4+28
+NSC 231+Waiting Iist of Shelley & Nici (5)+Jude York+Monaco+225+7+56
+NSC 232+Endórë+Linkin Park+The Emptiness Machine+223+8+54
+NSC 233+Waiting Iist of Shelley & Nici (6)+Sushin Shyam, Mary Ann Alexander, Vinayak Sasikumar+Sthuthi+177+6+2
+NSC 234+Xhuxhmaxhuxh (2)+Damiano David+Born with a Broken Heart+196+3+15
+NSC 235+Illumia (4)+Let's Eat Grandma+Levitation+162+4+0
+NSC 236+Tanoiro (2)+She Past Away+İnziva+198+6+45
+NSC 237+Marcobia+NoGood Boyo+Just a G.O.A.T+197+6+10
+NSC 238+Belvist (4)+Go_A+Kalyna+222+4+3
+NSC 239+Orangualia (3)+junodream+White Whale+169+	5
+NSC 240+Zombira (2)+Lorien Testard & Alice Duport-Percier+Alicia+163+	13 

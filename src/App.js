@@ -7,6 +7,7 @@ import TitleBanner from "./components/TitleBanner";
 import AnimatedVoteDisplay from "./components/AnimatedVoteDisplay";
 import DiscordInviteLink from "./components/DiscordInviteLink";
 import IntermittentBanner from "./components/IntermittentBanner";
+import RandomWinner from "./components/RandomWinner";
 
 export default function App() {
   const semi1 = entries.filter((e) => e.group === "semi1");
@@ -68,6 +69,7 @@ export default function App() {
           <span className="underline">mfmo92</span>
         </div>
         <IntermittentBanner />
+        <RandomWinner />
       </main>
     </div>
   );

@@ -9,7 +9,7 @@ const ParticipationCard = ({ entry }) => (
     }
   >
     <div className="text-center text-lg font-bold opacity-90">
-      {entry.participating ? "🎉" : "⏳"} {entry.nation} {entry.participating ? "🎉" : ""}
+      {entry.participating ? "🎉" : "⏳"} {entry.nation} {entry.participating ? "🎉" : ""} {entry.reserve ? "(⚠️ reserve ⚠️)" : ""}
     </div>
   </div>
 );

@@ -31,17 +31,17 @@ const nscWinners = [
     {edition: 'NSC 30', country: 'Tohru', artist: 'Jenifer', song: "Si c'est une île", points: 219, wins: 3, margin: 27},
     {edition: 'NSC 31', country: 'St. Lotus', artist: 'Polarkreis 18', song: 'Allein Allein', points: 203, wins: 7, margin: 24},
     {edition: 'NSC 32', country: 'Begonia', artist: 'Lauri Tähkä', song: 'Pauhaava sydän', points: 167, wins: 5, margin: 1},
-    {edition: 'NSC 33', country: 'Vorhota', artist: 'Laura Pausini', song: 'Surrender 203 \t1'},
-    {edition: 'NSC 34', country: 'Swelatie', artist: 'Kelly Clarkson', song: 'My Life Would Suck Without You 183 \t8'},
-    {edition: 'NSC 35', country: 'Prasia', artist: 'Sash! feat. Stunt', song: 'Raindrops (Encore une fois) 202 \t10'},
-    {edition: 'NSC 36', country: 'Belvist', artist: 'Keane', song: 'Crystal Ball 182 \t9'},
-    {edition: 'NSC 37', country: 'Reym-L-Dneurb', artist: 'Goldfrapp', song: 'Strict Machine 172 \t3'},
-    {edition: 'NSC 38', country: 'Bokia', artist: 'Freemasons feat. Sophie Ellis-Bextor', song: 'Heartbreak Make Me a Dancer 213 \t8'},
+    {edition: 'NSC 33', country: 'Vorhota', artist: 'Laura Pausini', song: 'Surrender', points: 203, wins: 5, margin: 1},
+    {edition: 'NSC 34', country: 'Swelatie', artist: 'Kelly Clarkson', song: 'My Life Would Suck Without You', points: 183},
+    {edition: 'NSC 35', country: 'Prasia', artist: 'Sash! feat. Stunt', song: 'Raindrops (Encore une fois)', points: 202},
+    {edition: 'NSC 36', country: 'Belvist', artist: 'Keane', song: 'Crystal Ball', points: 182},
+    {edition: 'NSC 37', country: 'Reym-L-Dneurb', artist: 'Goldfrapp', song: 'Strict Machine', points: 172},
+    {edition: 'NSC 38', country: 'Bokia', artist: 'Freemasons feat. Sophie Ellis-Bextor', song: 'Heartbreak Make Me a Dancer', points: 213},
     {edition: 'NSC 39', country: 'Canedonia', artist: 'Jennifer Lopez', song: "Ain't It Funny", points: 168, wins: 4, margin: 1},
     {edition: 'NSC 40', country: 'Zaprya', artist: 'Armin van Buuren feat. Sharon den Adel', song: 'In and Out of Love', points: 166, wins: 3, margin: 1},
     {edition: 'NSC 41', country: 'Vorhota', artist: 'Lily Allen', song: 'Fuck You', points: 161, wins: 1, margin: 3},
     {edition: 'NSC 42', country: 'Vegetaria', artist: 'Space Cowboy', song: 'Falling Down', points: 206, wins: 6, margin: 20},
-    {edition: 'NSC 43', country: 'Scorpionia', artist: 'Vanilla Ninja', song: 'Blue Tattoo 177 \t2'},
+    {edition: 'NSC 43', country: 'Scorpionia', artist: 'Vanilla Ninja', song: 'Blue Tattoo', points: 172},
     {edition: 'NSC 44', country: 'Scorpionia', artist: 'Ani Lorak', song: "I'm Alive", points: 165, wins: 4, margin: 18},
     {edition: 'NSC 45', country: 'Spila', artist: 'Lady Gaga', song: 'Bad Romance', points: 190, wins: 7, margin: 13},
     {edition: 'NSC 46', country: 'Reignland', artist: 'Brown Eyed Girls', song: 'Abracadabra', points: 153, wins: 1, margin: 9},
@@ -237,8 +237,8 @@ const nscWinners = [
     {edition: 'NSC 236', country: 'Tanoiro', artist: 'She Past Away', song: 'İnziva', points: 198, wins: 6, margin: 45},
     {edition: 'NSC 237', country: 'Marcobia', artist: 'NoGood Boyo', song: 'Just a G.O.A.T', points: 197, wins: 6, margin: 10},
     {edition: 'NSC 238', country: 'Belvist', artist: 'Go_A', song: 'Kalyna', points: 222, wins: 4, margin: 3},
-    {edition: 'NSC 239', country: 'Orangualia', artist: 'junodream', song: 'White Whale 169 \t5'},
-    {edition: 'NSC 240', country: 'Zombira', artist: 'Lorien Testard & Alice Duport-Percier', song: 'Alicia 163 \t13'}
+    {edition: 'NSC 239', country: 'Orangualia', artist: 'junodream', song: 'White Whale', points: 169},
+    {edition: 'NSC 240', country: 'Zombira', artist: 'Lorien Testard & Alice Duport-Percier', song: 'Alicia', points: 163}
 ];
 
 export default nscWinners;

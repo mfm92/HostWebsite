@@ -7,7 +7,7 @@ const DonationBanner = () => (
       donation can save lives.
     </span>
     <a
-      href="https://www.canadahelps.org/en/charities/canadian-association-for-suicide-prevention-casp-acps/"
+      href="https://suicideprevention.ca/ways-to-donate/"
       target="_blank"
       rel="noopener noreferrer"
       className="bg-white text-pink-700 font-bold px-5 py-2 rounded shadow-md hover:bg-pink-100 transition"

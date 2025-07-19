@@ -5,6 +5,7 @@ import { AnimatedBackground, usePerformanceMonitor } from "animated-backgrounds"
 import { entries } from "./data/entries";
 import TabButton from "./components/TabButton"; // Import the TabButton component
 import TitleBanner from "./components/TitleBanner";
+import AnimatedVoteDisplay from "./components/AnimatedVoteDisplay";
 
 export default function App() {
   const semi1 = entries.filter((e) => e.group === "semi1");
@@ -29,7 +30,7 @@ export default function App() {
     <div>
       <main className="min-h-screen text-white p-8 space-y-8">
         <AnimatedBackground
-          animationName="fireflies"
+          animationName="starryNight"
           interactive={true}
           interactionConfig={{
             effect: "attract",
@@ -58,11 +59,11 @@ export default function App() {
               )
           )}
         </div>
-        <div className="mt-16 text-center text-white text-xl bg-gray-900/90 p-6 rounded-lg shadow-lg font-semibold animate-pulse">
-          🗳️ Votes can be sent until{" "}
-          <span className="text-red-400 font-semibold">July 25</span> to{" "}
-          <span className="underline">@NSCUser</span> or via email to{" "}
-          <span className="underline">votes@nsc.com</span>
+        <div className="mt-16 text-center text-white text-xl bg-gray-900/90 p-6 rounded-lg shadow-lg font-semibold animate-pulse border-t-2 border-b-2 border-orange-400">
+          🗳️ Entries can be sent until{" "}
+          <span className="text-orange-400 font-semibold">July 27 (end of day) </span> to{" "}
+          <span className="underline">@pjelacki</span> or via Discord to{" "}
+          <span className="underline">mfmo92</span>
         </div>
         <DonationBanner />
       </main>

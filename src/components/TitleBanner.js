@@ -4,16 +4,19 @@ export default function TitleBanner() {
   return (
     <section className="flex flex-col items-center space-y-5">
       <h1 className="text-5xl font-extrabold text-center bg-gradient-to-r from-orange-700/80 to-orange-300/80 text-white p-8 rounded-2xl shadow-2xl tracking-wide">
-        NSC 242 in Begonia?
+        NSC 242 in Begonia
       </h1>
-      <div className="max-w-xl w-full mx-auto text-center text-lg bg-gray-900/95 p-6 rounded-xl shadow-lg border-t-4 border-yellow-400 animate-pulse transition-shadow hover:shadow-2xl">
-        <span className="font-semibold text-yellow-200">Natia</span> is the <span className="font-mono">242nd edition</span> of the NSC, featuring entries from various nations.
-        <span className="block mt-3 text-red-400 font-extrabold text-xl">
-          Voting is open until July 25
-        </span>
-        <span className="block mt-2 text-base text-gray-200">
-          Please send your votes to <span className="underline text-blue-300">@NSCUser</span> or via email to <span className="underline text-blue-300">votes@nsc.com</span>.
-        </span>
+      <div className="max-w-xl w-full mx-auto text-center text-lg bg-gray-900/95 p-6 rounded-xl shadow-lg border-t-4 border-b-4 border-orange-400 animate-pulse transition-shadow hover:shadow-2xl">
+        <p className="text-orange-400">
+          Send your entry until <b className="text-orange-200">July 27 (end of day, CEST)</b>* to participate.
+          <br />
+          Send your entry either to <a href="https://www.escunited.com"
+              className="text-white underline">@pjelacki</a> on ESCunited.com or to @mfmo92 on Discord.
+          <br />
+          <span className="text-orange-100 text-sm">
+            *Deadline could be pushed back if the forum is lagging again.
+          </span>
+        </p>  
       </div>
     </section>
   );

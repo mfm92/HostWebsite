@@ -41,7 +41,6 @@ export default function App() {
           }}
         />
         <TitleBanner/>
-        <DiscordInviteLink />
         <div className="flex flex-wrap gap-2 justify-center mb-6 mt-6">
           {tabs.map(tab => (
             <TabButton

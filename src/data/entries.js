@@ -45,7 +45,7 @@ const entries = [
   { nation: "Sakuralia", participating: true },
   { nation: "Södermalm", participating: false },
   { nation: "Svobodnia", participating: true },
-  { nation: "Szimbaya Kingdom", participating: false },
+  { nation: "Szimbaya Kingdom", participating: true },
   { nation: "Tamausia & Deltannor", participating: false },
   { nation: "Tanoiro", participating: true },
   { nation: "Tcher-Racoi", participating: false },

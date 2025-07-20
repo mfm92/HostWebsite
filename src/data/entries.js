@@ -1,6 +1,6 @@
 const entries = [
   { nation: "Adamsburg", participating: true },
-  { nation: "Afnia", participating: false },
+  { nation: "Afnia", participating: true },
   { nation: "Aimūlli", participating: false },
   { nation: "Bála Kunmenai", participating: false },
   { nation: "Balearica Island", participating: false },
@@ -44,7 +44,7 @@ const entries = [
   { nation: "Rumia", participating: false },
   { nation: "Sakuralia", participating: true },
   { nation: "Södermalm", participating: false },
-  { nation: "Svobodnia", participating: false },
+  { nation: "Svobodnia", participating: true },
   { nation: "Szimbaya Kingdom", participating: false },
   { nation: "Tamausia & Deltannor", participating: false },
   { nation: "Tanoiro", participating: true },

@@ -12,7 +12,7 @@ const ParticipationCard = ({ entry }) => (
       {entry.participating ? "🎉" : "⏳"}{" "}
       {entry.nation}{" "}
       {entry.participating ? "🎉" : ""}{" "}
-      {entry.reserve ? "(⚠️ reserve ⚠️)" : ""}
+      {entry.reserve ? <sup>R</sup> : ""}
       {entry.pq ? <sup>PQ</sup> : ""}{" "}
     </div>
   </div>

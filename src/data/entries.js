@@ -36,7 +36,7 @@ const entries = [
   { nation: "Papendink", participating: false },
   { nation: "Perryfornia", participating: false },
   { nation: "Rahasia-Diati", participating: true },
-  { nation: "Redwood Republic", participating: false },
+  { nation: "Redwood Republic", participating: true },
   { nation: "Rehi Kaita", participating: false },
   { nation: "Reym-L-Dneurb", participating: false },
   { nation: "Roseland", participating: true },

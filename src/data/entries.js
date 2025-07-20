@@ -1,5 +1,5 @@
 const entries = [
-  { nation: "Adamsburg", participating: false },
+  { nation: "Adamsburg", participating: true },
   { nation: "Afnia", participating: false },
   { nation: "Aimūlli", participating: false },
   { nation: "Bála Kunmenai", participating: false },

@@ -59,7 +59,7 @@ const entries = [
   { nation: "Xhuxhmaxhuxh", participating: false },
   { nation: "Xochimilia", participating: false, pq: true },
   { nation: "Yaponesia", participating: false },
-  { nation: "Zombira", participating: false },
+  { nation: "Zombira", participating: true },
 ];
 
 export { entries };

@@ -18,6 +18,8 @@ const ParticipationCard = ({ entry }) => {
     ? "🎉"
     : entry.banned
     ? "🚫"
+    : entry.gone ?
+    "😢" 
     : "⏳";
 
   return (
@@ -35,6 +37,9 @@ const ParticipationCard = ({ entry }) => {
         {entry.pq && (
           <span className="ml-1 text-xs bg-white/20 px-2 py-0.5 rounded text-white-200">PQ</span>
         )}
+        {entry.gone && (
+          <span className="ml-1 text-xs bg-white/20 px-2 py-0.5 rounded text-white-200">WITHDRAWAL</span>
+        )}
       </div>
       <div className="h-[1.5px] w-1/2 bg-white/30 rounded my-1" />
       <div className="uppercase tracking-wide text-xs text-zinc-100 opacity-70 mt-2">
@@ -42,7 +47,9 @@ const ParticipationCard = ({ entry }) => {
           ? "Participating"
           : entry.banned
           ? "Has to skip"
-          : "Waiting"}
+          : entry.gone ?
+          "Sad to see you go":
+          "Waiting"}
       </div>
     </div>
   );

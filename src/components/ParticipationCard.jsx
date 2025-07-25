@@ -51,6 +51,14 @@ const ParticipationCard = ({ entry }) => {
           "Sad to see you go":
           "Waiting"}
       </div>
+      {entry.nation == "Griffin Empire" && <div>
+        <a
+          href="https://www.escunited.com/forum/threads/30th-griffiniskaja-laul-is-live.5986/post-2517443"
+          className="mt-2 text-xs text-white hover:animate-pulse transition-colors bg-white/20 px-2 py-1 rounded hover:bg-white/30 shadow hover:shadow-lg"
+        >
+          Check out GL30 here
+        </a>
+      </div>}
     </div>
   );
 };

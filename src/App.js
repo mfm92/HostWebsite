@@ -32,7 +32,7 @@ export default function App() {
     <div>
       <main className="min-h-screen text-white p-8 space-y-8">
         <AnimatedBackground
-          animationName="electricStorm"
+          animationName="starryNight"
           interactive={true}
           interactionConfig={{
             effect: "attract",

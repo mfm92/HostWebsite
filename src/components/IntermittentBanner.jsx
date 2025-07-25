@@ -19,7 +19,7 @@ const IntermittentBanner = () => {
   }, []);
 
   return (
-    <div className={fadeProp.fade}>
+    <div className={fadeProp.fade} font="proximanova">
       {showCongrats ? <CongratsBanner /> : <DonationBanner />}
     </div>
   );

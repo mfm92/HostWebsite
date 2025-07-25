@@ -27,7 +27,7 @@ const RandomWinner = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-orange-900/70 to-black-500/70 p-4 rounded-lg shadow-lg text-center">
+    <div className="font-proximanova bg-gradient-to-r from-orange-900/70 to-black-500/70 p-4 rounded-lg shadow-lg text-center">
         ... trip down memory lane with a random NSC winner!
         {currentWinner && (
         <div className={`winner-fade ${isVisible ? 'visible' : ''}`}>

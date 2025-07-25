@@ -1,10 +1,10 @@
 import React from "react";
 import FlipCard from "./FlipCard";
 import ParticipationCard from "./ParticipationCard";
+import AnimatedEntryProgressBar from "./EntryProgressBar"; // Import new bar
 
 const gitCommitDate = process.env.REACT_APP_GIT_COMMIT_DATE;
 
-// Format the date for Central European Summer Time (CEST)
 const formatDateForCEST = (isoString) => {
   if (!isoString) return null;
   const date = new Date(isoString);
@@ -14,13 +14,16 @@ const formatDateForCEST = (isoString) => {
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    timeZone: 'Europe/Berlin', // Handles CET/CEST as appropriate
-    timeZoneName: 'short',     // Shows 'CET' or 'CEST'
+    timeZone: 'Europe/Berlin',
+    timeZoneName: 'short',
   };
   return date.toLocaleString('en-US', options);
 };
 
 const Section = ({ title, entries, flip = true }) => {
+  const confirmed = entries.filter(e => e.participating).length;
+  const total = 60; // You can make this dynamic if needed
+
   return (
     <section className="mb-12">
       {gitCommitDate && !flip && (
@@ -28,9 +31,10 @@ const Section = ({ title, entries, flip = true }) => {
           Last updated on {formatDateForCEST(gitCommitDate)}
         </div>
       )}
-      <h2 className="text-3xl font-bold text-center border-t-2 border-b-2 border-orange-400 bg-gray-900/90 text-white-200 mb-6 bg-gradient-to-r p-4 rounded-lg shadow-lg">
-        {title} {flip ? "" : "(" + entries.filter(e => e.participating).length + "/60 entries confirmed)"}
+      <h2 className="text-3xl font-bold text-center border-t-2 border-b-2 border-orange-400 bg-gray-900/90 text-white-200 mb-3 bg-gradient-to-r p-4 rounded-lg shadow-lg">
+        {title}
       </h2>
+      {!flip && <AnimatedEntryProgressBar confirmed={confirmed} total={total} />}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
         {entries.map((entry, idx) =>
           flip ? (

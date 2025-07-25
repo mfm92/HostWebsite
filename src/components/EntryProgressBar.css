@@ -1,0 +1,77 @@
+.entry-progress-bar-bg {
+  width: 100%;
+  height: 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #23283a 0%, #363949 100%);
+  box-shadow: 0 2px 12px 0 rgba(20,20,30,0.08), 0 1.5px 12px 0 rgba(244,137,29,0.10);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+
+.entry-progress-bar-fill {
+  height: 100%;
+  border-radius: 999px 0 0 999px;
+  background: linear-gradient(90deg, #ff9900, #ffa938 44%, #ffdd99 100%);
+  box-shadow: 0 0 10px 2px #ff91004a, 0 0 32px 6px #ffd58050;
+  transition: width 1.1s cubic-bezier(0.68,0.01,0.33,1);
+  position: absolute;
+  left: 0; top: 0;
+}
+
+.entry-progress-bar-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.16) 40%, transparent 100%);
+  z-index: 1;
+}
+
+.entry-progress-bar-fill {
+  height: 100%;
+  border-radius: 999px 0 0 999px;
+  background: linear-gradient(90deg, #b76f03, #ffa938 44%, #ffdd99 100%);
+  box-shadow: 0 0 10px 2px #ff91004a, 0 0 32px 6px #ffd58050;
+  transition: width 1.1s cubic-bezier(0.68,0.01,0.33,1);
+  position: absolute;
+  left: 0; top: 0;
+  overflow: hidden; /* so effects don't overflow! */
+}
+
+/* --- Moving SHIMMER (angled light) --- */
+.progress-bar-shimmer {
+  position: absolute;
+  top: 0; left: -60%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.07) 35%, rgba(255,255,255,0.25) 49%, rgba(255, 255, 255, 0.07) 65%);
+  filter: blur(1px);
+  animation: shimmer-move 2.1s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer-move {
+  0% { left: -60%; }
+  100% { left: 100%; }
+}
+
+/* --- Moving floating ORBS --- */
+.progress-bar-orbs {
+  position: absolute;
+  bottom: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  background:
+    radial-gradient(circle 8px, rgba(255, 255, 255, 0.17) 40%, transparent 55%) 10% 18px/24px 56px no-repeat,
+    radial-gradient(circle 8px, rgba(255,246,234,0.15) 40%, transparent 57%) 55% 7px/19px 52px no-repeat,
+    radial-gradient(circle 6px,  rgba(255, 200, 90, 0.22) 48%, transparent 59%) 82% 6px/16px 35px no-repeat;
+  animation: orbs-move 5.8s linear infinite;
+}
+
+@keyframes orbs-move {
+  0% { background-position: 10% 18px, 55% 7px, 82% 6px; }
+  50% { background-position: 13% 8px, 60% 17px, 77% 16px; }
+  100% { background-position: 10% 18px, 55% 7px, 82% 6px; }
+}

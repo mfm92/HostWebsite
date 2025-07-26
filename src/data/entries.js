@@ -19,7 +19,7 @@ const entries = [
   { nation: "Endórë", participating: false },
   { nation: "Fervorosia", participating: false },
   { nation: "Fierraria", participating: true },
-  { nation: "Grand Duchy of Strenci", participating: false },
+  { nation: "Grand Duchy of Strenci", participating: true },
   { nation: "Griffin Empire", participating: true, pq: true },
   { nation: "Halito", participating: true },
   { nation: "Insomnéa", participating: false },

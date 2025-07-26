@@ -71,7 +71,10 @@ export default function TitleBanner() {
         <div className="flex-1 bg-gray-900/60 backdrop-blur-xl rounded-2xl shadow-md border-t-2 border-orange-400/40 p-6 flex flex-col items-center min-w-[220px]">
           <span className="text-orange-400 font-bold text-lg mb-2">How to Enter</span>
           <ul className="text-white/90 text-base leading-relaxed text-center space-y-1">
-            <li>Submit a song for NSC 242</li>
+            Please submit your entry with the following information:
+            <li className="text-sm text-orange-100/80">
+              <b>Nation Name</b> - <i>Artist Name</i> - <i>Song Title</i> - <i>Link to the song</i>
+            </li>
             <li>Deadline: <b>July 27, 23:59 CEST</b></li>
           </ul>
         </div>

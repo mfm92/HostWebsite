@@ -57,7 +57,7 @@
 
 .cool-border:hover::before {
   background-position: 80% 40%; /* Only this moves */
-  opacity: 1;
+  opacity: 0.8;
 }
 
 .flag-fade {

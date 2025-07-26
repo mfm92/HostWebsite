@@ -59,3 +59,46 @@
   background-position: 80% 40%; /* Only this moves */
   opacity: 1;
 }
+
+.flag-fade {
+  opacity: 0;
+  animation: fadeInFlag 1s 0.2s forwards;
+  position: relative;
+}
+@keyframes fadeInFlag {
+  to { opacity: 1; }
+}
+
+.flag-shine {
+  position: relative;
+  overflow: hidden;
+}
+.flag-shine::before {
+  content: "";
+  position: absolute;
+  top: -75%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 55%, rgba(255,255,255,0.35) 65%, rgba(255,255,255,0) 80%);
+  transform: skewX(-20deg);
+  transition: left 0.6s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+  pointer-events: none;
+}
+.flag-shine:hover::before {
+  left: 110%;
+  transition: left 0.8s cubic-bezier(.65,0,.2,1);
+}
+
+.flag-pop {
+  transform: scale(0.7) rotate(-10deg);
+  opacity: 0.2;
+  animation: popInFlag .65s cubic-bezier(.23,1.17,.61,1.14) forwards;
+}
+@keyframes popInFlag {
+  to {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}

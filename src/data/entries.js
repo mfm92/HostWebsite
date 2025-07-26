@@ -58,7 +58,7 @@ const entries = [
   { nation: "Waiting Iist of Shelley & Nici", participating: true },
   { nation: "Xhuxhmaxhuxh", participating: false },
   { nation: "Xochimilia", participating: false, pq: true },
-  { nation: "Yaponesia", participating: false },
+  { nation: "Yaponesia", participating: true },
   { nation: "Zombira", participating: true },
 ];
 

@@ -23,6 +23,7 @@ const entries = [
   { nation: "Griffin Empire", participating: true, pq: true },
   { nation: "Halito", participating: true },
   { nation: "Insomnéa", participating: false },
+  { nation: "Inzinimirit", participating: true , reserve: true},
   { nation: "Kamandé", participating: true },
   { nation: "Kimmystan", participating: true },
   { nation: "Konthena", participating: false },

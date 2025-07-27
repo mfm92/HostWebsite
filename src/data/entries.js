@@ -34,7 +34,6 @@ const entries = [
   { nation: "Meridia", participating: true },
   { nation: "New Acadia", participating: true },
   { nation: "New Bander State", participating: true },
-  { nation: "Orsa", participating: true, reserve: true },
   { nation: "Öösingimäed", participating: true },
   { nation: "Papendink", participating: true },
   { nation: "Perryfornia", participating: false, banned: true },

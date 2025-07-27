@@ -31,13 +31,13 @@ function FlagImage({ nation }) {
 
 const ParticipationCard = ({ entry }) => {
   const statusGradients = entry.participating
-    ? "bg-gradient-to-br from-orange-800/70 to-orange-300/60"
+    ? (entry.reserve ? "bg-gradient-to-br from-yellow-700/80 to-white/50" : "bg-gradient-to-br from-orange-800/70 to-orange-300/60")
     : entry.banned
     ? "bg-gradient-to-br from-rose-700/80 to-red-400/50"
     : "bg-gradient-to-br from-zinc-800/80 to-slate-400/60";
 
   const ringColor = entry.participating
-    ? "ring-2 ring-orange-500"
+    ? (entry.reserve ? "ring-2 ring-yellow-500" : "ring-2 ring-orange-400")
     : entry.banned
     ? "ring-2 ring-rose-500"
     : "ring-2 ring-slate-400";
@@ -78,7 +78,7 @@ const ParticipationCard = ({ entry }) => {
   <div className="h-[1.5px] w-1/2 bg-white/30 rounded my-1" />
   <div className="uppercase tracking-wide text-xs text-zinc-100 opacity-70 mt-2">
     {entry.participating
-      ? "Participating"
+      ? (entry.reserve ? "Reserved" : "Participating")
       : entry.banned
       ? "Has to skip"
       : entry.gone

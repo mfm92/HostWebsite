@@ -48,6 +48,8 @@ const ParticipationCard = ({ entry }) => {
     ? "🚫"
     : entry.gone ?
     "😢" 
+    : entry.mustConfirm
+    ? "🚨"
     : "⏳";
 
   return (

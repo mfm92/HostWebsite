@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const DEADLINE = new Date("2025-07-27T21:59:00Z"); // July 27, 23:59 CEST = 21:59 UTC
+const DEADLINE = new Date("2025-07-28T19:00:00Z"); // July 27, 23:59 CEST = 21:59 UTC
 
 function getTimeRemaining() {
   const now = new Date();
@@ -58,10 +58,7 @@ export default function TitleBanner() {
         </div>
         <div>
           <span className="text-orange-300 font-semibold text-lg">Deadline to confirm:</span>
-          <span className="text-white font-extrabold"> July 27 (end of day, CEST)</span>
-        </div>
-        <div className="text-orange-200 text-xs italic mt-1">
-          ... could be pushed back if the forum is lagging.
+          <span className="text-white font-extrabold"> July 28 (9M, CEST <span className="text-orange-400 animate-pulse">not midnight!</span>)</span>
         </div>
       </div>
 
@@ -75,7 +72,7 @@ export default function TitleBanner() {
             <li className="text-sm text-orange-100/80">
               <b>Nation Name</b> - <i>Artist Name</i> - <i>Song Title</i> - <i>Link to the song</i>
             </li>
-            <li>Deadline: <b>July 27, 23:59 CEST</b></li>
+            <li>Deadline: <b>July 28, 21:00 CEST</b> (<span className="text-orange-400 animate-pulse">not midnight!</span>)</li>
           </ul>
         </div>
         {/* SUBMISSION CHANNELS */}

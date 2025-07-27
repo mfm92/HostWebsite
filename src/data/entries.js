@@ -5,7 +5,7 @@ const entries = [
   { nation: "Bála Kunmenai", participating: true },
   { nation: "Balearica Island", participating: false },
   { nation: "Begonia", participating: true, pq: true },
-  { nation: "Belvist", participating: false, pq: true },
+  { nation: "Belvist", participating: true, pq: true },
   { nation: "Biflovatia", participating: true },
   { nation: "Calypso", participating: false },
   { nation: "Carpentaria", participating: true },

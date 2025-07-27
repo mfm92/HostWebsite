@@ -28,7 +28,7 @@ const entries = [
   { nation: "Kamandé", participating: true },
   { nation: "Kimmystan", participating: true },
   { nation: "Konthena", participating: false, mustConfirm: true },
-  { nation: "Kordavian Islands", participating: false },
+  { nation: "Kordavian Islands", participating: true },
   { nation: "Marcobia", participating: true },
   { nation: "MatiMati", participating: true },
   { nation: "Meridia", participating: true },

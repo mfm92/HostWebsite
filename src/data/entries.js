@@ -1,7 +1,7 @@
 const entries = [
   { nation: "Adamsburg", participating: true },
   { nation: "Afnia", participating: true },
-  { nation: "Aimūlli", participating: false },
+  { nation: "Aimūlli", participating: true },
   { nation: "Bála Kunmenai", participating: true },
   { nation: "Balearica Island", participating: false },
   { nation: "Begonia", participating: true, pq: true },
@@ -27,7 +27,7 @@ const entries = [
   { nation: "Inzinimirit", participating: true , reserve: true},
   { nation: "Kamandé", participating: true },
   { nation: "Kimmystan", participating: true },
-  { nation: "Konthena", participating: false, mustConfirm: true },
+  { nation: "Konthena", participating: true },
   { nation: "Kordavian Islands", participating: true },
   { nation: "Marcobia", participating: true },
   { nation: "MatiMati", participating: true },
@@ -59,7 +59,7 @@ const entries = [
   { nation: "Vylkuzeme", participating: true },
   { nation: "Waiting Iist of Shelley & Nici", participating: true },
   { nation: "Xhuxhmaxhuxh", participating: false, mustConfirm: true },
-  { nation: "Xochimilia", participating: false, pq: true },
+  { nation: "Xochimilia", participating: true, pq: true },
   { nation: "Yaponesia", participating: true },
   { nation: "Zombira", participating: true },
 ];

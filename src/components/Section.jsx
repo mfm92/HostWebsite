@@ -36,13 +36,25 @@ const Section = ({ title, entries, flip = true }) => {
       </h2>
       {!flip && <AnimatedEntryProgressBar confirmed={confirmed} total={total} />}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
-        {entries.map((entry, idx) =>
-          flip ? (
-            <FlipCard entry={entry} key={idx} />
-          ) : (
-            <ParticipationCard entry={entry} key={idx} />
-          )
-        )}
+        {entries
+          .slice() // to avoid mutating the original array
+          .sort((a, b) => {
+            if (flip) {
+              // sort by order (assuming entry.order is a number)
+              return (a.order || 0) - (b.order || 0);
+            } else {
+              // sort by nation name
+              return a.nation.localeCompare(b.nation);
+            }
+          })
+          .map((entry, idx) =>
+            flip ? (
+              <FlipCard entry={entry} key={idx} />
+            ) : (
+              <ParticipationCard entry={entry} key={idx} />
+            )
+          )}
+
       </div>
     </section>
   );

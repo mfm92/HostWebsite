@@ -18,10 +18,10 @@ export default function App() {
 
   const tabs = [
     { key: "participating", label: "Participating Nations", entries: entries },
-    { key: "semi1", label: "Semi 1", entries: semi1 },
+   /* { key: "semi1", label: "Semi 1", entries: semi1 },
     { key: "semi1pq", label: "Semi 1 PQs", entries: pq1 },
     { key: "semi2", label: "Semi 2", entries: semi2 },
-    { key: "semi2pq", label: "Semi 2 PQs", entries: pq2 },
+    { key: "semi2pq", label: "Semi 2 PQs", entries: pq2 },*/
   ].filter(tab => tab.entries.length > 0);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function App() {
 
   return (
     <div>
-      <main className="min-h-screen text-white p-8 space-y-8">
+      <main className="min-h-screen text-white p-2 space-y-8">
         <AnimatedBackground
           animationName="starryNight"
           interactive={true}
@@ -42,7 +42,6 @@ export default function App() {
           }}
         />
         <TitleBanner/>
-        <DiscordInviteLink />
         <div className="flex flex-wrap gap-2 justify-center mb-6 mt-6">
           {tabs.map(tab => (
             <TabButton

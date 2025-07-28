@@ -50,7 +50,7 @@ const entries = [
   { nation: "Tamausia & Deltannor", participating: true },
   { nation: "Tanoiro", participating: true },
   { nation: "Tcher-Racoi", participating: true },
-  { nation: "Tír an Abhainn", participating: false, pq: true },
+  { nation: "Tír an Abhainn", participating: true, pq: true },
   { nation: "Trollheimr", participating: true },
   { nation: "Ugaly", participating: true },
   { nation: "United Kingdom of Destrion", participating: true },

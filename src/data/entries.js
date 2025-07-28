@@ -13,7 +13,6 @@ const entries = [
   { nation: "Comino", participating: true },
   { nation: "Cydoni-Gibberia", participating: true },
   { nation: "Dalisska", participating: true },
-  { nation: "Dež Republic", participating: true, reserve: true },
   { nation: "Doire", participating: true },
   { nation: "Dwyforland", participating: true },
   { nation: "Emsfrynt", participating: true },

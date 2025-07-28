@@ -1,10 +1,5 @@
 const entries = [
   {
-    "nation": "Perryfornia",
-    "participating": false,
-    "banned": true,
-  },
-  {
     "nation": "Begonia",
     "participating": true,
     "artist": "First Hate",
@@ -410,27 +405,8 @@ const entries = [
     "youtube": "https://www.youtube.com/watch?v=qSNh-b8pw3Y"
   },
   {
-    "nation": "Insomnéa",
-    "participating": false,
-  },
-  {
-    "nation": "Cherniya",
-    "participating": false,
-    gone: true,
-  },
-  {
-    "nation": "Xhuxhmaxhuxh",
-    "participating": false,
-    mustConfirm: true,
-  },
-  {
-    "nation": "Balearica Island",
-    "participating": false,
-  },
-  {
     "nation": "Inzinimirit",
     "participating": true,
-    "reserve": true,
     "artist": "Csinszka",
     "group": "semi1",
     "order": 25,

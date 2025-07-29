@@ -12,8 +12,8 @@ import IntermittentBanner from "./components/IntermittentBanner";
 const tabs = [
   { key: "semi1", path: "/semi1", label: "Semi 1", group: "semi1" },
   { key: "semi1pq", path: "/semi1pq", label: "Semi 1 PQs", group: "pq1" },
-  /*{ key: "semi2", path: "/semi2", label: "Semi 2", group: "semi2" },
-  { key: "semi2pq", path: "/semi2pq", label: "Semi 2 PQs", group: "pq2" },*/
+  { key: "semi2", path: "/semi2", label: "Semi 2", group: "semi2" },
+  { key: "semi2pq", path: "/semi2pq", label: "Semi 2 PQs", group: "pq2" }
 ];
 
 function TabsNav() {

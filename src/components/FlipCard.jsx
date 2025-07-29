@@ -2,9 +2,15 @@ import React, { useState } from "react";
 import "../styles/ParticipationCard.css"; // New: Import the CSS
 
 function FlagImage({ nation }) {
-  const [extIndex, setExtIndex] = useState(0);
   const extensions = ["png", "jpeg", "jpg"];
-  const [src, setSrc] = useState(`/flags/${nation}.${extensions[extIndex]}`);
+  const [extIndex, setExtIndex] = useState(0);
+  const [src, setSrc] = useState(`/flags/${nation}.${extensions[0]}`);
+
+  // Whenever nation changes, reset extIndex and src!
+  React.useEffect(() => {
+    setExtIndex(0);
+    setSrc(`/flags/${nation}.${extensions[0]}`);
+  }, [nation]);
 
   const handleError = () => {
     if (extIndex < extensions.length - 1) {
@@ -12,7 +18,7 @@ function FlagImage({ nation }) {
       setExtIndex(newIndex);
       setSrc(`/flags/${nation}.${extensions[newIndex]}`);
     } else {
-      setSrc("/flags/Default.png"); // fallback to default if all fail
+      setSrc("/flags/Default.png");
     }
   };
 
@@ -21,11 +27,12 @@ function FlagImage({ nation }) {
       src={src}
       alt={`${nation} flag`}
       className="w-full h-full object-cover flag-fade flag-pop"
-      loading="lazy"
+      loading="eager"
       onError={handleError}
     />
   );
 }
+
 
 const CardContent = ({ entry }) => (
   <div className="flex flex-col space-y-2 items-center w-full">
@@ -41,7 +48,7 @@ const CardContent = ({ entry }) => (
         href={entry.youtube}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-1 px-4 py-1 rounded-full text-sm bg-white text-black font-bold shadow transition hover:bg-orange-500 hover:text-white hover:scale-105 duration-200 border-2 border-orange-400"
+        className="mt-1 px-4 py-1 rounded-full text-sm bg-white text-black font-bold shadow transition hover:bg-orange-500 hover:text-white hover:scale-115 duration-200 border-2 border-orange-400"
       >
         YouTube
       </a>
@@ -60,7 +67,7 @@ const FlipCard = ({ entry }) => {
           flex flex-col justify-center items-center
           rounded-2xl shadow-[0_0_25px_#FF7A00AA]
           border-2 border-white
-          bg-gradient-to-br from-black to-orange-400
+          bg-gradient-to-br from-black/70 to-orange-400/70
           text-white
           transition-opacity duration-500
           group-hover:opacity-0
@@ -103,8 +110,8 @@ const FlipCard = ({ entry }) => {
         aria-label={`Play ${entry.song} by ${entry.artist} on YouTube`}
         className="
           absolute w-full h-full rounded-2xl flex flex-col items-center justify-center
-          shadow-2xl border-2 border-black
-          bg-gradient-to-br from-black to-orange-600 text-white
+          shadow-2xl border-2 border-white
+          bg-gradient-to-br from-orange-700/70 to-black/70 text-white
           opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-6
           transition-all duration-500 z-20 px-3 outline-none
           focus-visible:ring-4 focus-visible:ring-orange-400 focus-visible:ring-opacity-60

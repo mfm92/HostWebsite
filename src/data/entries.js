@@ -135,7 +135,7 @@ const entries = [
     "youtube": "https://youtu.be/a06zfmqPXFE?si=-kjus1UmZIz0hUqE"
   },
   {
-    "nation": "Rahasia & Diati",
+    "nation": "Rahasia-Diati",
     "participating": true,
     "artist": "Hayes & Y",
     "song": "Leave Forever",
@@ -455,7 +455,7 @@ const entries = [
     "artist": "ZAZ",
     "group": "semi2",
     "order": 22,
-    "song": "Mon coeur es fou",
+    "song": "Mon cœur tu es fou",
     "youtube": "https://youtu.be/myM25b5QpCY?si=pcR1UM7k9EXV4Uu_"
   },
   {

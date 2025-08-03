@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 // Replace these with live state or props as needed!
 const mockSubmittedCountries = [
-  "Griffin Empire", "Afnia", "Roseland", "Sakuralia", "Halito", "Begonia", "Emsfrynt", "Cydoni-Gibberia", "Meridia", "Södermalm"
+  "Griffin Empire", "Afnia", "Comino", "Roseland", "Sakuralia", "Halito", "Begonia", "Emsfrynt", "Cydoni-Gibberia", "Meridia", "Södermalm"
 ];
 const mockSubmittedRejuCountries = [
   "Griffin Empire", "Roseland", "Södermalm"

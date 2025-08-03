@@ -1,7 +1,8 @@
 import React from "react";
 import FlipCard from "./FlipCard";
 import ParticipationCard from "./ParticipationCard";
-import AnimatedEntryProgressBar from "./EntryProgressBar"; // Import new bar
+import AnimatedEntryProgressBar from "./EntryProgressBar";
+import ScrollBanner from "./BannerScroll";
 
 const gitCommitDate = process.env.REACT_APP_GIT_COMMIT_DATE;
 
@@ -20,9 +21,22 @@ const formatDateForCEST = (isoString) => {
   return date.toLocaleString('en-US', options);
 };
 
+const titleTranslate = {
+  "Semi 1": "semi1",
+  "Semi 2": "semi2"
+};
+
 const Section = ({ title, entries, flip = true }) => {
   const confirmed = entries.filter(e => e.participating).length;
-  const total = 60; // You can make this dynamic if needed
+  const total = 60; // Adjust as needed
+
+  // Banner: Only for Semi 1/Semi 2
+  const showBanner = (title === "Semi 1" || title === "Semi 2");
+  const bannerEntries = showBanner
+    ? entries
+        .filter(entry => entry.group === titleTranslate[title])
+        .sort((a, b) => (a.order || 0) - (b.order || 0))
+    : [];
 
   return (
     <section className="mb-12">
@@ -35,26 +49,35 @@ const Section = ({ title, entries, flip = true }) => {
         {title}
       </h2>
       {!flip && <AnimatedEntryProgressBar confirmed={confirmed} total={total} />}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
-        {entries
-          .slice() // to avoid mutating the original array
-          .sort((a, b) => {
-            if (flip) {
-              // sort by order (assuming entry.order is a number)
-              return (a.order || 0) - (b.order || 0);
-            } else {
-              // sort by nation name
-              return a.nation.localeCompare(b.nation);
-            }
-          })
-          .map((entry, idx) =>
-            flip ? (
-              <FlipCard entry={entry} key={idx} />
-            ) : (
-              <ParticipationCard entry={entry} key={idx} />
-            )
-          )}
 
+      {/* Content + Banner gap grouped in a column */}
+      <div className="flex flex-col gap-y-8">
+        {/* Grid of cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+          {entries
+            .slice() // avoid mutating the original array
+            .sort((a, b) => {
+              if (flip) {
+                return (a.order || 0) - (b.order || 0);
+              } else {
+                return a.nation.localeCompare(b.nation);
+              }
+            })
+            .map((entry, idx) =>
+              flip ? (
+                <FlipCard entry={entry} key={idx} />
+              ) : (
+                <ParticipationCard entry={entry} key={idx} />
+              )
+            )}
+        </div>
+
+        {/* Banner row BELOW or ABOVE grid */}
+        {showBanner && (
+          <div className="w-full">
+            <ScrollBanner participants={bannerEntries} label={`${title} - VOTING LINES ARE OPEN`}/>
+          </div>
+        )}
       </div>
     </section>
   );

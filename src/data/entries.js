@@ -5,6 +5,8 @@ const entries = [
     "artist": "First Hate",
     "song": "What's the matter, boy?",
     "group": "pq2",
+    "code": "BEG",
+    "semiVoted": true,
     pq: true,
     "youtube": "www.youtube.com/watch?v=O1H9F7sC8Gg"
   },
@@ -15,6 +17,7 @@ const entries = [
     "order": 22,
     "artist": "Sublahshini, Anirudh Ravichander, Asal Kolaar",
     "song": "Monica",
+    "code": "MAR",
     "youtube": "https://www.youtube.com/watch?v=2qCpY38ompo"
   },
   {
@@ -22,7 +25,9 @@ const entries = [
     "participating": true,
     "group": "semi1",
     "order": 21,
+    "code": "EMS",
     "artist": "tAngerinecAt",
+    "semiVoted": true,
     "song": "House of Shards",
     "youtube": "https://youtu.be/UAzpBEUkpvg?si=YQEGJlKlnASfQR13"
   },
@@ -31,6 +36,7 @@ const entries = [
     "participating": true,
     "group": "semi2",
     "order": 19,
+    "code": "KIM",
     "artist": "Deloraine",
     "song": "Arkona",
     "youtube": "https://www.youtube.com/watch?v=9Qphhm-Dfx4&embeds_referring_euri=https%3A%2F%2Fwww.escunited.com%2F&source_ve_path=MjM4NTE"
@@ -41,6 +47,7 @@ const entries = [
     "artist": "bbno$ x ironmouse",
     "group": "semi2",
     "order": 25,
+    "code": "NAC",
     "song": "1-800",
     "youtube": "https://youtu.be/6Ro7NubzE9A?si=6TtBt8VOpCmGXYJH"
   },
@@ -48,7 +55,10 @@ const entries = [
     "nation": "Griffin Empire",
     "participating": true,
     "artist": "Conan Gray",
+    "code": "GRF",
     "song": "Vodka Cranberry",
+    "semiVoted": true,
+    "rejuVoted": true,
     "group": "pq2",
     pq: true,
     "youtube": "https://youtu.be/Yzbvv8WdP9k"
@@ -56,7 +66,9 @@ const entries = [
   {
     "nation": "Sakuralia",
     "participating": true,
+    "semiVoted": true,
     "artist": "Aqua",
+    "code": "SAK",
     "group": "semi2",
     "order": 10,
     "song": "Turn Back Time",
@@ -68,6 +80,7 @@ const entries = [
     "group": "semi1",
     "order": 26,
     "artist": "BLACKPINK",
+    "code": "WISN",
     "song": "뛰어(JUMP)",
     "youtube": "https://youtu.be/CgCVZdcKcqY"
   },
@@ -75,6 +88,7 @@ const entries = [
     "nation": "Dwyforland",
     "participating": true,
     "artist": "Carla",
+    "code": "DWY",
     "group": "semi2",
     "order": 9,
     "song": "Coquillages",
@@ -85,6 +99,9 @@ const entries = [
     "participating": true,
     "group": "semi1",
     "order": 6,
+    "code": "ROS",
+    "semiVoted": true,
+    "rejuVoted": true,
     "artist": "Miley Cyrus feat. Naomi Campbell",
     "song": "Every Girl You've Ever Loved",
     "youtube": "https://www.youtube.com/watch?v=ukTm71Id0uE"
@@ -95,6 +112,7 @@ const entries = [
     "artist": "South Arcade",
     "group": "semi1",
     "order": 20,
+    "code": "UGL",
     "song": "How 2 Get Away With Murder",
     "youtube": "https://www.youtube.com/watch?v=46azFIIHz9s"
   },
@@ -103,7 +121,9 @@ const entries = [
     "participating": true,
     "group": "semi2",
     "order": 4,
+    "code": "CYG",
     "artist": "Honningbarna",
+    "semiVoted": true,
     "song": "Rød bic",
     "youtube": "https://www.youtube.com/watch?v=OukwwhubczQ"
   },
@@ -112,6 +132,7 @@ const entries = [
     "participating": true,
     "group": "semi1",
     "order": 18,
+    "code": "TAN",
     "artist": "la euphoria, moistbreezy",
     "song": "Heaven’s Where You Are",
     "youtube": "https://youtu.be/Sb2t9SROcxE?si=BwyUAVFbIoxXWSRF&t=1896"
@@ -121,6 +142,7 @@ const entries = [
     "participating": true,
     "group": "semi2",
     "order": 13,
+    "code": "KAM",
     "artist": "Shania Twain",
     "song": "Giddy Up!",
     "youtube": "https://www.youtube.com/watch?v=-6BGu-GyKWQ"
@@ -131,6 +153,7 @@ const entries = [
     "artist": "BARTKY",
     "group": "semi2",
     "order": 15,
+    "code": "FIE",
     "song": "Zlospiv",
     "youtube": "https://youtu.be/a06zfmqPXFE?si=-kjus1UmZIz0hUqE"
   },
@@ -139,6 +162,7 @@ const entries = [
     "participating": true,
     "artist": "Hayes & Y",
     "song": "Leave Forever",
+    "code": "RAH",
     "group": "semi2",
     "order": 21,
     "youtube": "https://youtu.be/r0cVOT_bLU0"
@@ -148,6 +172,7 @@ const entries = [
     "participating": true,
     "artist": "Agnes",
     "group": "semi1",
+    "code": "ADM",
     "order": 2,
     "song": "Balenciaga Covered Eyes",
     "youtube": "https://youtu.be/WI1Agrdf3bA?si=c4gPAI0Jt0rAMnDr"
@@ -155,6 +180,7 @@ const entries = [
   {
     "nation": "Svobodnia",
     "participating": true,
+    "code": "SVO",
     "artist": "Ambre Ciel",
     "group": "semi2",
     "order": 14,
@@ -164,8 +190,10 @@ const entries = [
   {
     "nation": "Afnia",
     "participating": true,
+    "code": "AFN",
     "artist": "OSG",
     "group": "semi2",
+    "semiVoted": true,
     "order": 23,
     "song": "Hate",
     "youtube": "https://www.youtube.com/watch?v=ayit1E_MZAM"
@@ -175,6 +203,7 @@ const entries = [
     "participating": true,
     "artist": "Bonnie Tyler",
     "group": "semi1",
+    "code": "SZK",
     "order": 10,
     "song": "It's a heart ache",
     "youtube": "https://youtu.be/bEOl38y8Nj8?si=KlUk_xb7E3dZSy5r"
@@ -184,6 +213,7 @@ const entries = [
     "participating": true,
     "artist": "Teddy Swims",
     "group": "semi1",
+    "code": "RWR",
     "order": 9,
     "song": "Bad Dreams",
     "youtube": "https://www.youtube.com/watch?v=Qh8QwVYOSVU"
@@ -192,8 +222,10 @@ const entries = [
     "nation": "Meridia",
     "participating": true,
     "group": "semi2",
+    "code": "FRM",
     "order": 2,
     "artist": "Nilusi",
+    "semiVoted": true,
     "song": "Boru Kata",
     "youtube": "https://youtu.be/4Y1djb7v-jo"
   },
@@ -202,12 +234,14 @@ const entries = [
     "participating": true,
     "artist": "Brutalismus 3000",
     "group": "semi2",
+    "code": "PAP",
     "order": 17,
     "song": "Europaträume",
     "youtube": "https://www.youtube.com/watch?v=qBPdU57antg"
   },
   {
     "nation": "Roxma Nova",
+    "code": "RXN",
     "participating": true,
     "artist": "Pupociklu Vasara",
     "song": "Ganiņš",
@@ -218,6 +252,7 @@ const entries = [
   {
     "nation": "Öösingimäed",
     "participating": true,
+    "code": "ÖÖS",
     "artist": "carbeau",
     "song": "Regno",
     "group": "semi1",
@@ -229,6 +264,7 @@ const entries = [
     "participating": true,
     "group": "semi1",
     "order": 1,
+    "code": "VER",
     "artist": "Arilena Ara",
     "song": "Weightless",
     "youtube": "https://youtu.be/wzPy6vG0gEE?si=GcgxcXhHN1UP3QsS"
@@ -237,6 +273,7 @@ const entries = [
     "nation": "United Kingdom of Destrion",
     "participating": true,
     "group": "semi2",
+    "code": "UKD",
     "order": 5,
     "artist": "DJ Lag ft. Jazz Alonso",
     "song": "Oke Oke",
@@ -249,6 +286,9 @@ const entries = [
     "group": "semi2",
     "order": 6,
     "song": "Sjórok",
+    "semiVoted": true,
+    "code": "SÖD",
+    "rejuVoted": true,
     "youtube": "https://youtu.be/49bV7xfdlAQ?si=w0yONH9C6dp0mfkL"
   },
   {
@@ -256,6 +296,7 @@ const entries = [
     "participating": true,
     "group": "semi2",
     "order": 12,
+    "code": "CAR",
     "artist": "Teddy Bears ft. Iggy Pop",
     "song": "Punkrocker",
     "youtube": "https://www.youtube.com/watch?v=4lYIhKhgIuY"
@@ -264,6 +305,7 @@ const entries = [
     "nation": "Biflovatia",
     "participating": true,
     "group": "semi1",
+    "code": "BIF",
     "order": 8,
     "artist": "Mefjus & Camo & Krooked",
     "song": "Sientelo",
@@ -274,7 +316,9 @@ const entries = [
     "participating": true,
     "artist": "Wet Leg",
     "group": "semi1",
+    "semiVoted": true,
     "order": 19,
+    "code": "COM",
     "song": "Catch These Fists",
     "youtube": "https://youtu.be/6Kjz89xYmS4?si=NGhSpV9clQDkDDnm"
   },
@@ -284,6 +328,7 @@ const entries = [
     "artist": "SADU",
     "group": "semi1",
     "order": 3,
+    "code": "ZOM",
     "song": "Luukered",
     "youtube": "https://www.youtube.com/watch?v=PBHce3_47wU"
   },
@@ -293,6 +338,8 @@ const entries = [
     "artist": "Naethan Apollo",
     "group": "semi2",
     "order": 1,
+    "semiVoted": true,
+    "code": "HAL",
     "song": "ANYTHING 4 U",
     "youtube": "https://www.youtube.com/watch?v=jjellZ6ml9U"
   },
@@ -302,6 +349,7 @@ const entries = [
     "artist": "The Vad Vuc",
     "group": "semi2",
     "order": 16,
+    "code": "TRO",
     "song": "Fruntiera",
     "youtube": "https://www.youtube.com/watch?v=Gd9bDlANT48"
   },
@@ -310,6 +358,7 @@ const entries = [
     "participating": true,
     "group": "semi2",
     "order": 11,
+    "code": "T&D",
     "artist": "Caroline Kingsbury",
     "song": "Shock Treatment",
     "youtube": "https://youtu.be/_-QKvoV2ofs?si=EHz4x9ik19IOuvBz"
@@ -319,6 +368,7 @@ const entries = [
     "participating": true,
     "group": "semi1",
     "order": 7,
+    "code": "RLD",
     "artist": "Anna Buchegger",
     "song": "Kim Vorbei",
     "youtube": "https://www.youtube.com/watch?v=mnOUj4pvOPU"
@@ -327,6 +377,7 @@ const entries = [
     "nation": "Grand Duchy of Strenci",
     "participating": true,
     "artist": "Ride",
+    "code": "GDS",
     "group": "semi2",
     "order": 8,
     "song": "Like a Daydream",
@@ -337,6 +388,7 @@ const entries = [
     "participating": true,
     "group": "semi1",
     "order": 23,
+    "code": "YAP",
     "artist": "Babychair x teeBai",
     "song": "Time",
     "youtube": "https://www.youtube.com/watch?v=hL4vkS4H0Uo"
@@ -347,6 +399,7 @@ const entries = [
     "artist": "CMAT",
     "song": "Euro-Country",
     "group": "semi1",
+    "code": "DOI",
     "order": 12,
     "youtube": "https://www.youtube.com/watch?v=_SVNTv44C4g"
   },
@@ -354,6 +407,7 @@ const entries = [
     "nation": "MatiMati",
     "participating": true,
     "group": "semi2",
+    "code": "MAT",
     "order": 20,
     "artist": "Barry Blum",
     "song": "Yeti Theme",
@@ -364,6 +418,7 @@ const entries = [
     "participating": true,
     "artist": "MIKA",
     "group": "semi2",
+    "code": "FER",
     "order": 3,
     "song": "C'est la vie",
     "youtube": "https://www.youtube.com/watch?v=Oe7AU05BuZ8"
@@ -373,6 +428,7 @@ const entries = [
     "participating": true,
     "artist": "LEMONSUCKR",
     "group": "semi2",
+    "code": "NBS",
     "order": 18,
     "song": "DEAD DISCO",
     "youtube": "https://youtu.be/ZWJl-NWvV4E?list=RDZWJl-NWvV4E"
@@ -384,12 +440,14 @@ const entries = [
     "group": "semi2",
     "order": 24,
     "song": "Whatever",
+    "code": "DAL",
     "youtube": "https://www.youtube.com/watch?v=jVHfhEhAXE4&ab_channel=Zimmer90"
   },
   {
     "nation": "Rehi Kaita",
     "participating": true,
     "artist": "RoBERT",
+    "code": "REK",
     "group": "semi1",
     "order": 11,
     "song": "Tout ce qu'on dit de toi",
@@ -398,6 +456,7 @@ const entries = [
   {
     "nation": "Vylkuzeme",
     "participating": true,
+    "code": "VYL",
     "group": "semi1",
     "order": 15,
     "artist": "Mr. Hurley & Die Pulveraffen feat. Warkings",
@@ -409,12 +468,14 @@ const entries = [
     "participating": true,
     "artist": "Csinszka",
     "group": "semi1",
+    "code": "INZ",
     "order": 25,
     "song": "Airday",
     "youtube": "https://www.youtube.com/watch?v=6Ed41ISsP0Y&ab_channel=Csinszka"
   },
   {
     "nation": "Rumia",
+    "code": "RUM",
     "participating": true,
     "artist": "Golec uOrkiestra",
     "song": "Ściernisco",
@@ -425,6 +486,7 @@ const entries = [
   {
     "nation": "Bála Kunmenai",
     "participating": true,
+    "code": "BÁK",
     "artist": "Carla's Dreams",
     "group": "semi1",
     "order": 16,
@@ -437,6 +499,7 @@ const entries = [
     "artist": "Ягода",
     "group": "semi1",
     "order": 24,
+    "code": "TCR",
     "song": "Три девицы",
     "youtube": "https://www.youtube.com/watch?v=0e2Ls3JmJbw"
   },
@@ -446,6 +509,7 @@ const entries = [
     "artist": "bb sway",
     "group": "semi1",
     "order": 17,
+    "code": "CAL",
     "song": "Why'd You Think I Called You On The Phone?",
     "youtube": "https://www.youtube.com/watch?v=qxCuRDXyrlI"
   },
@@ -455,6 +519,7 @@ const entries = [
     "artist": "ZAZ",
     "group": "semi2",
     "order": 22,
+    "code": "END",
     "song": "Mon cœur tu es fou",
     "youtube": "https://youtu.be/myM25b5QpCY?si=pcR1UM7k9EXV4Uu_"
   },
@@ -462,6 +527,7 @@ const entries = [
     "nation": "Kordavian Islands",
     "participating": true,
     "group": "semi2",
+    "code": "KOI",
     "order": 7,
     "artist": "Natalia Doco and Devendra Banhart",
     "song": "Quedate Luna",
@@ -472,6 +538,7 @@ const entries = [
     "participating": true,
     "artist": "Novi",
     "group": "pq1",
+    "code": "BLV",
     pq: true,
     "song": "Shadow Heart",
     "youtube": "https://www.youtube.com/watch?v=4jtZZgzcrJg"
@@ -480,6 +547,7 @@ const entries = [
     "nation": "Aimūlli",
     "participating": true,
     "artist": "Renaissance",
+    "code": "AIM",
     "group": "semi1",
     "order": 5,
     "song": "Opening Out",
@@ -489,6 +557,7 @@ const entries = [
     "nation": "Xochimilia",
     "participating": true,
     "artist": "Mobley",
+    "code": "XOC",
     "group": "pq1",
     pq: true,
     "song": "Infinite Sunrise",
@@ -498,6 +567,7 @@ const entries = [
     "nation": "Konthena",
     "participating": true,
     "artist": "breathe.",
+    "code": "KON",
     "song": "Grace",
     "group": "semi1",
     "order": 4,
@@ -507,6 +577,7 @@ const entries = [
     "nation": "Tír an Abhainn",
     "participating": true,
     "group": "pq1",
+    "code": "TAA",
     pq: true,
     "artist": "boipepperoni, Mahavok",
     "song": "Tants Läbi Elu",

@@ -23,7 +23,7 @@ export default function TitleBanner() {
   const { days, hours, minutes, seconds } = timeLeft;
 
   return (
-    <section className="flex flex-col items-center justify-center p-6 bg-gradient-to-r from-black/80 to-zinc-800/80 text-white rounded-lg shadow-lg rounded-5xl backdrop-blur-md">
+    <section className="flex flex-col items-center justify-center p-6 bg-gradient-to-r from-zinc-800/70 to-gray-800/80 text-white rounded-lg shadow-lg rounded-5xl background-blur-xl">
       {/* Headline */}
       <div className="w-full flex items-center justify-center mb-6">
         <h1 className="text-4xl md:text-5xl font-black text-center bg-gradient-to-r from-orange-700/95 to-orange-300/80 text-white px-14 py-8 rounded-[3rem] shadow-2xl tracking-wide ring-2 ring-orange-400/70 drop-shadow-lg">

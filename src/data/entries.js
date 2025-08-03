@@ -206,6 +206,8 @@ const entries = [
     "artist": "Bonnie Tyler",
     "group": "semi1",
     "code": "SZK",
+    "semiVoted": true,
+    "rejuVoted": true,
     "order": 10,
     "song": "It's a heart ache",
     "youtube": "https://youtu.be/bEOl38y8Nj8?si=KlUk_xb7E3dZSy5r"

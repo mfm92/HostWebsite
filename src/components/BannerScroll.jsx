@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { entries } from "../data/entries";
 
 const extensions = ["png", "jpeg", "jpg"];
 
@@ -52,7 +51,7 @@ function ScrollBlock({ participants, label, extraMarginEnd }) {
           className="flex items-center gap-2 mx-7"
           style={idx === participants.length - 1 && extraMarginEnd ? { marginRight: extraMarginEnd } : undefined}
         >
-          <span className="text-xl font-bold text-orange-400">{entry.order}</span>
+          <span className="text-xl font-bold text-orange-400">{entry.order ? entry.order : "PQ"}</span>
           <FlagImage nation={entry.nation} />
           <span className="text-s text-white font-bold tracking-widest uppercase">{entry.code}</span>
         </div>

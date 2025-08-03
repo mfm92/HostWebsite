@@ -23,9 +23,10 @@ export default function TitleBanner() {
   const { days, hours, minutes, seconds } = timeLeft;
 
   return (
-    <section className="flex flex-col items-center justify-center p-6 bg-gradient-to-r from-zinc-800/70 to-gray-800/80 text-white rounded-lg shadow-lg rounded-5xl background-blur-xl">
+    <div className="flex items-center justify-center">
+    <section className="flex flex-col items-center justify-center p-1 text-white shadow-lg rounded-5xl w-3/5 background-blur-xl border-orange-400">
       {/* Headline */}
-      <div className="w-full flex items-center justify-center mb-6">
+      <div className="w-full flex items-center justify-center mb-5">
         <h1 className="text-4xl md:text-5xl font-black text-center bg-gradient-to-r from-orange-700/95 to-orange-300/80 text-white px-14 py-8 rounded-[3rem] shadow-2xl tracking-wide ring-2 ring-orange-400/70 drop-shadow-lg">
           NSC 242 in Begonia
         </h1>
@@ -60,5 +61,6 @@ export default function TitleBanner() {
         </div>
       </div>
     </section>
+    </div>
   );
 }

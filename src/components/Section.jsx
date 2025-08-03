@@ -3,6 +3,7 @@ import FlipCard from "./FlipCard";
 import ParticipationCard from "./ParticipationCard";
 import AnimatedEntryProgressBar from "./EntryProgressBar";
 import ScrollBanner from "./BannerScroll";
+import { entries as globEntries } from "../data/entries";
 
 const gitCommitDate = process.env.REACT_APP_GIT_COMMIT_DATE;
 
@@ -22,8 +23,8 @@ const formatDateForCEST = (isoString) => {
 };
 
 const titleTranslate = {
-  "Semi 1": "semi1",
-  "Semi 2": "semi2"
+  "Semi 1": ["semi1", "pq1"],
+  "Semi 2": ["semi2", "pq2"]
 };
 
 const Section = ({ title, entries, flip = true }) => {
@@ -33,9 +34,9 @@ const Section = ({ title, entries, flip = true }) => {
   // Banner: Only for Semi 1/Semi 2
   const showBanner = (title === "Semi 1" || title === "Semi 2");
   const bannerEntries = showBanner
-    ? entries
-        .filter(entry => entry.group === titleTranslate[title])
-        .sort((a, b) => (a.order || 0) - (b.order || 0))
+    ? globEntries
+        .filter(entry => titleTranslate[title].includes(entry.group))
+        .sort((a, b) => (a.order || Infinity) - (b.order || Infinity))
     : [];
 
   return (

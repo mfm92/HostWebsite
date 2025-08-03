@@ -95,7 +95,7 @@ export default function VotingInfoAndVotes() {
   return (
     <div className="flex flex-col md:flex-row justify-center items-stretch gap-9 w-full">
       {/* Left panel - instructions */}
-      <div className="relative w-full md:w-2/5 max-w-lg mx-auto text-center backdrop-blur-xl p-10 rounded-2xl shadow-lg border-t-4 border-b-4 border-orange-400/70 mb-10 md:mb-0 flex-grow-0 select-none">
+      <div className="relative w-full md:w-2/5 max-w-lg mx-auto text-center background-blur-xl p-10 rounded-2xl bg-zinc-800/50 shadow-lg border-t-4 border-b-4 border-orange-400/70 mb-10 md:mb-0 flex-grow-0 select-none">
         <div className="text-white text-2xl font-extrabold mb-3 uppercase tracking-wide">
           Send your votes! (Both Regular and Reju)
         </div>
@@ -123,7 +123,7 @@ export default function VotingInfoAndVotes() {
       </div>
 
       {/* Right panel - votes */}
-      <div className="relative w-full md:w-3/5 mx-auto text-center bg-gray/70 backdrop-blur-xl p-8 rounded-2xl shadow-lg border-t-4 border-b-4 border-orange-400/70 flex flex-col justify-between flex-grow select-none">
+      <div className="relative w-full md:w-3/5 mx-auto text-center bg-zinc-800/50 background-blur-xl p-8 rounded-2xl shadow-lg border-t-4 border-b-4 border-orange-400/70 flex flex-col justify-between flex-grow select-none">
         <div>
           <div className="uppercase text-orange-700 font-bold mb-4 text-center tracking-wide text-lg">
             Votes received from

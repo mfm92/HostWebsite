@@ -90,6 +90,8 @@ const entries = [
     "artist": "Carla",
     "code": "DWY",
     "group": "semi2",
+    "semiVoted": true,
+    "rejuVoted": true,
     "order": 9,
     "song": "Coquillages",
     "youtube": "https://youtu.be/wqK3N9JBIaQ?list=RDwqK3N9JBIaQ"

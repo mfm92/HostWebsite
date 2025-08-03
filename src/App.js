@@ -7,6 +7,7 @@ import { entries } from "./data/entries";
 import TabButton from "./components/TabButton";
 import TitleBanner from "./components/TitleBanner";
 import IntermittentBanner from "./components/IntermittentBanner";
+import VotingInformation from "./components/VotingInformation";
 
 // Make this helper outside the App component
 const tabs = [
@@ -96,6 +97,7 @@ export default function App() {
         <TitleBanner/>
         <TabsNav />
         <SectionsRoutes />
+        <VotingInformation />
         <IntermittentBanner />
       </main>
     </Router>

@@ -179,6 +179,7 @@ const entries = [
     "artist": "Agnes",
     "group": "semi1",
     "code": "ADM",
+    "semiVoted": true,
     "order": 2,
     "song": "Balenciaga Covered Eyes",
     "youtube": "https://youtu.be/WI1Agrdf3bA?si=c4gPAI0Jt0rAMnDr"

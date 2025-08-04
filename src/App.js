@@ -43,6 +43,11 @@ function TabsNav() {
           onClick={() => navigate(tab.path)}
         >
           {tab.label}
+          {tab.label.includes('PQ') && (
+            <sup className="ml-2 text-xs text-white bg-orange-700 rounded animate-pulse border-2 border-orange-900">
+              PQ RO added
+            </sup>
+          )}
         </TabButton>
       ))}
     </div>

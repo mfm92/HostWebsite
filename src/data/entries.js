@@ -38,6 +38,7 @@ const entries = [
     "order": 19,
     "code": "KIM",
     "artist": "Deloraine",
+    "semiVoted": true,
     "song": "Arkona",
     "youtube": "https://www.youtube.com/watch?v=9Qphhm-Dfx4&embeds_referring_euri=https%3A%2F%2Fwww.escunited.com%2F&source_ve_path=MjM4NTE"
   },
@@ -113,6 +114,7 @@ const entries = [
     "participating": true,
     "artist": "South Arcade",
     "group": "semi1",
+    "semiVoted": true,
     "order": 20,
     "code": "UGL",
     "song": "How 2 Get Away With Murder",
@@ -135,9 +137,11 @@ const entries = [
     "group": "semi1",
     "order": 18,
     "code": "TAN",
+    "semiVoted": true,
+    "rejuVoted": true,
     "artist": "la euphoria, moistbreezy",
     "song": "Heaven’s Where You Are",
-    "youtube": "https://youtu.be/Sb2t9SROcxE?si=BwyUAVFbIoxXWSRF&t=1896"
+    "youtube": "https://www.youtube.com/watch?v=NOpk9xo2EWQ"
   },
   {
     "nation": "Kamandé",

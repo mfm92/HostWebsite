@@ -6,6 +6,7 @@ const entries = [
     "song": "What's the matter, boy?",
     "group": "pq2",
     "code": "BEG",
+    "order": 28,
     "semiVoted": true,
     pq: true,
     "youtube": "https://www.youtube.com/watch?v=O1H9F7sC8Gg"
@@ -59,6 +60,7 @@ const entries = [
     "code": "GRF",
     "song": "Vodka Cranberry",
     "semiVoted": true,
+    "order": 5,
     "rejuVoted": true,
     "group": "pq2",
     pq: true,
@@ -254,6 +256,7 @@ const entries = [
     "participating": true,
     "artist": "Pupociklu Vasara",
     "song": "Ganiņš",
+    "order": 15,
     "group": "pq2",
     pq: true,
     "youtube": "https://youtu.be/f-Vy-Qoxh0c"
@@ -550,6 +553,7 @@ const entries = [
     "artist": "Novi",
     "group": "pq1",
     "code": "BLV",
+    "order": 22,
     pq: true,
     "song": "Shadow Heart",
     "youtube": "https://www.youtube.com/watch?v=4jtZZgzcrJg"
@@ -570,6 +574,7 @@ const entries = [
     "artist": "Mobley",
     "code": "XOC",
     "group": "pq1",
+    "order": 17,
     pq: true,
     "song": "Infinite Sunrise",
     "youtube": "https://www.youtube.com/watch?v=oMVJYq6pCug"
@@ -590,6 +595,7 @@ const entries = [
     "group": "pq1",
     "code": "TAA",
     pq: true,
+    order: "4",
     "artist": "boipepperoni, Mahavok",
     "song": "Tants Läbi Elu",
     "youtube": "https://youtu.be/_BqLTdEAut4?si=E8J5WIsUZ5dx3e4_"

@@ -131,9 +131,9 @@ export default function VotingInfoAndVotes() {
 
           {/* Normal votes groupings */}
           <FlagRow label="Semi 1 (Reg)" entries={filterAndSort(submittedCountries, ["semi1", "pq1"])} />
-          <FlagRow label="Semi 1 (ReJu)" entries={filterAndSort(submittedRejuCountries, ["semi1", "pq1"])} />
+          <FlagRow label="Semi 1 (ReJu)" entries={filterAndSort(submittedRejuCountries, ["semi2", "pq2"])} />
           <FlagRow label="Semi 2 (Reg)" entries={filterAndSort(submittedCountries, ["semi2", "pq2"])} />
-          <FlagRow label="Semi 2 (ReJu)" entries={filterAndSort(submittedRejuCountries, ["semi2", "pq2"])} />
+          <FlagRow label="Semi 2 (ReJu)" entries={filterAndSort(submittedRejuCountries, ["semi1", "pq1"])} />
         </div>
 
         {/* Commit/build info */}

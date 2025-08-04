@@ -8,7 +8,7 @@ const entries = [
     "code": "BEG",
     "semiVoted": true,
     pq: true,
-    "youtube": "www.youtube.com/watch?v=O1H9F7sC8Gg"
+    "youtube": "https://www.youtube.com/watch?v=O1H9F7sC8Gg"
   },
   {
     "nation": "Marcobia",

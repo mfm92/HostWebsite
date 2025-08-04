@@ -36,7 +36,19 @@ const Section = ({ title, entries, flip = true }) => {
   const bannerEntries = showBanner
     ? globEntries
         .filter(entry => titleTranslate[title].includes(entry.group))
-        .sort((a, b) => (a.order || Infinity) - (b.order || Infinity))
+        .sort((a, b) => {
+            // Check if group starts with 'pq'
+            const aIsPQ = a.group?.startsWith('pq') ? 1 : 0;
+            const bIsPQ = b.group?.startsWith('pq') ? 1 : 0;
+
+            // Rank non-pq groups before pq groups
+            if (aIsPQ !== bIsPQ) {
+                return aIsPQ - bIsPQ;
+            }
+
+            // If both are pq (or both are not), sort by order field (default: Infinity)
+            return (a.order || Infinity) - (b.order || Infinity);
+        })
     : [];
 
   return (

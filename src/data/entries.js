@@ -537,6 +537,8 @@ const entries = [
     "participating": true,
     "group": "semi2",
     "code": "KOI",
+    "semiVoted": true,
+    "rejuVoted": true,
     "order": 7,
     "artist": "Natalia Doco and Devendra Banhart",
     "song": "Quedate Luna",

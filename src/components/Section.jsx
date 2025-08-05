@@ -91,6 +91,7 @@ const Section = ({ title, entries, flip = true }) => {
             <ScrollBanner participants={bannerEntries} label={`${title} - VOTING LINES ARE OPEN`}/>
           </div>
         )}
+        
       </div>
     </section>
   );

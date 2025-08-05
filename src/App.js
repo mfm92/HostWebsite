@@ -43,11 +43,6 @@ function TabsNav() {
           onClick={() => navigate(tab.path)}
         >
           {tab.label}
-          {tab.label.includes('PQ') && (
-            <sup className="ml-2 text-xs text-white bg-orange-700 rounded animate-pulse border-2 border-orange-900">
-              PQ RO added
-            </sup>
-          )}
         </TabButton>
       ))}
     </div>
@@ -100,6 +95,11 @@ export default function App() {
           interactionConfig={{ effect: "attract", strength: 0.8, radius: 150, continuous: true }}
         />
         <TitleBanner/>
+        <div className="w-full px-2 mt-2">
+          <div className="bg-zinc-800/70 border-t-2 border-b-2 border-orange-500/60 text-white text-center text-2xl font-semibold py-2 rounded shadow-md tracking-wide animate-pulse">
+            Find out the qualifiers on AUG 7 at 9:00 PM CEST!
+          </div>
+        </div>
         <TabsNav />
         <SectionsRoutes />
         <VotingInformation />

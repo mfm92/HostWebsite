@@ -56,19 +56,31 @@ export function ResultsTable({ entries }) {
               className="border-b border-gray-800 cursor-default hover:bg-gray-800 transition-colors duration-300"
               title={`Place ${entry.resultPlace} — ${entry.artist} - ${entry.song}`}
             >
-              {entry.resultPlace === 10 ? (
+              {entry.resultPlace} === 10 ? (
                 <>
-                  <td className="py-3 px-4 font-extrabold text-orange-600 text-2xl text-center w-16 tabular-nums">
+                  <td className="py-3 px-4 italic text-gray-400 text-center">
                     10
                   </td>
                   <td colSpan={4} className="py-3 px-4 italic text-gray-400 text-center">
-                    
+                    10th place
                   </td>
                   <td className="py-3 px-4 font-extrabold text-orange-500 text-right text-2xl tabular-nums w-20">
                     {entry.resultPoints}
                   </td>
                 </>
-              ) : (
+              ): {entry.rejuJoker ? ( 
+                <>
+                  <td className="py-3 px-4 italic text-gray-400 text-center">
+                    {entry.resultPlace}
+                  </td>
+                  <td colSpan={4} className="py-3 px-4 italic text-gray-400 text-center">
+                    Rest Jury Qualifier
+                  </td>
+                  <td className="py-3 px-4 font-extrabold text-orange-500 text-right text-2xl tabular-nums w-20">
+                    {entry.resultPoints}
+                  </td>
+                </>
+              ): (
                 <>
                   <td className="py-3 px-4 font-extrabold text-orange-600 text-2xl text-center w-16 tabular-nums">
                     {entry.resultPlace}

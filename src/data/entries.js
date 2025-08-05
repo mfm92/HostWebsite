@@ -155,6 +155,7 @@ const entries = [
     "group": "semi2",
     "order": 13,
     "code": "KAM",
+    "semiVoted": true,
     "artist": "Shania Twain",
     "song": "Giddy Up!",
     "youtube": "https://www.youtube.com/watch?v=-6BGu-GyKWQ"
@@ -228,6 +229,7 @@ const entries = [
     "nation": "Redwood Republic",
     "participating": true,
     "artist": "Teddy Swims",
+    "semiVoted": true,
     "group": "semi1",
     "code": "RWR",
     "order": 9,
@@ -459,6 +461,7 @@ const entries = [
     "participating": true,
     "artist": "Zimmer90",
     "group": "semi2",
+    "rejuVoted": true,
     "order": 24,
     "song": "Whatever",
     "semiVoted": true,

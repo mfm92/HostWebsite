@@ -461,6 +461,7 @@ const entries = [
     "group": "semi2",
     "order": 24,
     "song": "Whatever",
+    "semiVoted": true,
     "code": "DAL",
     "youtube": "https://www.youtube.com/watch?v=jVHfhEhAXE4&ab_channel=Zimmer90"
   },

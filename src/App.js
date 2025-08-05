@@ -14,7 +14,9 @@ const tabs = [
   { key: "semi1", path: "/semi1", label: "Semi 1", group: "semi1" },
   { key: "semi1pq", path: "/semi1pq", label: "Semi 1 PQs", group: "pq1" },
   { key: "semi2", path: "/semi2", label: "Semi 2", group: "semi2" },
-  { key: "semi2pq", path: "/semi2pq", label: "Semi 2 PQs", group: "pq2" }
+  { key: "semi2pq", path: "/semi2pq", label: "Semi 2 PQs", group: "pq2" },
+  /*{ key: "semi1Results", path: "/semi1-results", label: "SEMI 1 Results", group: "semi1" },
+  { key: "semi2Results", path: "/semi2-results", label: "SEMI 2 Results", group: "semi2" },*/
 ];
 
 function TabsNav() {
@@ -70,6 +72,7 @@ function SectionsRoutes() {
             <Section
               title={tab.label}
               entries={tab.entries}
+              showResultsTable={tab.key.endsWith("Results")}
               flip={tab.key !== "participating"}
             />
           }

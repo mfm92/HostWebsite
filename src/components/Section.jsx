@@ -4,6 +4,7 @@ import ParticipationCard from "./ParticipationCard";
 import AnimatedEntryProgressBar from "./EntryProgressBar";
 import ScrollBanner from "./BannerScroll";
 import { entries as globEntries } from "../data/entries";
+import { ResultsTable } from "./ResultsTable";
 
 const gitCommitDate = process.env.REACT_APP_GIT_COMMIT_DATE;
 
@@ -31,22 +32,18 @@ const Section = ({ title, entries, flip = true }) => {
   const confirmed = entries.filter(e => e.participating).length;
   const total = 60; // Adjust as needed
 
+  // Is this a results tab?
+  const isResultsSection = title === "SEMI 1 Results" || title === "SEMI 2 Results";
+
   // Banner: Only for Semi 1/Semi 2
   const showBanner = (title === "Semi 1" || title === "Semi 2");
   const bannerEntries = showBanner
     ? globEntries
         .filter(entry => titleTranslate[title].includes(entry.group))
         .sort((a, b) => {
-            // Check if group starts with 'pq'
             const aIsPQ = a.group?.startsWith('pq') ? 1 : 0;
             const bIsPQ = b.group?.startsWith('pq') ? 1 : 0;
-
-            // Rank non-pq groups before pq groups
-            if (aIsPQ !== bIsPQ) {
-                return aIsPQ - bIsPQ;
-            }
-
-            // If both are pq (or both are not), sort by order field (default: Infinity)
+            if (aIsPQ !== bIsPQ) return aIsPQ - bIsPQ;
             return (a.order || Infinity) - (b.order || Infinity);
         })
     : [];
@@ -61,37 +58,40 @@ const Section = ({ title, entries, flip = true }) => {
       <h2 className="text-3xl font-bold text-center border-t-2 border-b-2 border-orange-400 bg-gray-900/90 text-white-200 mb-3 bg-gradient-to-r p-4 rounded-lg shadow-lg">
         {title}
       </h2>
-      {!flip && <AnimatedEntryProgressBar confirmed={confirmed} total={total} />}
+      {!flip && !isResultsSection && <AnimatedEntryProgressBar confirmed={confirmed} total={total} />}
 
-      {/* Content + Banner gap grouped in a column */}
       <div className="flex flex-col gap-y-8">
-        {/* Grid of cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
-          {entries
-            .slice() // avoid mutating the original array
-            .sort((a, b) => {
-              if (flip) {
-                return (a.order || 0) - (b.order || 0);
-              } else {
-                return a.nation.localeCompare(b.nation);
-              }
-            })
-            .map((entry, idx) =>
-              flip ? (
-                <FlipCard entry={entry} key={idx} />
-              ) : (
-                <ParticipationCard entry={entry} key={idx} />
-              )
+        {!isResultsSection ? (
+          <>
+            {/* Grid of cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+              {entries
+                .slice()
+                .sort((a, b) => {
+                  if (flip) {
+                    return (a.order || 0) - (b.order || 0);
+                  } else {
+                    return a.nation.localeCompare(b.nation);
+                  }
+                })
+                .map((entry, idx) =>
+                  flip ? (
+                    <FlipCard entry={entry} key={idx} />
+                  ) : (
+                    <ParticipationCard entry={entry} key={idx} />
+                  )
+                )}
+            </div>
+            {/* Banner row */}
+            {showBanner && (
+              <div className="w-full">
+                <ScrollBanner participants={bannerEntries} label={`${title} - VOTING LINES ARE OPEN`} />
+              </div>
             )}
-        </div>
-
-        {/* Banner row BELOW or ABOVE grid */}
-        {showBanner && (
-          <div className="w-full">
-            <ScrollBanner participants={bannerEntries} label={`${title} - VOTING LINES ARE OPEN`}/>
-          </div>
+          </>
+        ) : (
+          <ResultsTable entries={entries} />
         )}
-        
       </div>
     </section>
   );

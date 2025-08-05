@@ -162,6 +162,7 @@ const entries = [
     "nation": "Fierraria",
     "participating": true,
     "artist": "BARTKY",
+    "semiVoted": true,
     "group": "semi2",
     "order": 15,
     "code": "FIE",

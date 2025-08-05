@@ -8,6 +8,7 @@ const entries = [
     "code": "BEG",
     "order": 28,
     "semiVoted": true,
+    "rejuVoted": true,
     pq: true,
     "youtube": "https://www.youtube.com/watch?v=O1H9F7sC8Gg"
   },

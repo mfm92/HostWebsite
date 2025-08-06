@@ -53,6 +53,7 @@ const entries = [
     "group": "semi2",
     "order": 25,
     "code": "NAC",
+    "semiVoted": true,
     "song": "1-800",
     "youtube": "https://youtu.be/6Ro7NubzE9A?si=6TtBt8VOpCmGXYJH"
   },
@@ -176,6 +177,8 @@ const entries = [
     "participating": true,
     "artist": "Hayes & Y",
     "song": "Leave Forever",
+    "semiVoted": true,
+    "rejuVoted": true,
     "code": "RAH",
     "group": "semi2",
     "order": 21,
@@ -209,6 +212,7 @@ const entries = [
     "artist": "OSG",
     "group": "semi2",
     "semiVoted": true,
+    "rejuVoted": true,
     "order": 23,
     "song": "Hate",
     "youtube": "https://www.youtube.com/watch?v=ayit1E_MZAM"
@@ -254,6 +258,7 @@ const entries = [
     "group": "semi2",
     "code": "PAP",
     "semiVoted": true,
+    "rejuVoted": true,
     "order": 17,
     "song": "Europaträume",
     "youtube": "https://www.youtube.com/watch?v=qBPdU57antg"
@@ -295,6 +300,7 @@ const entries = [
     "group": "semi2",
     "code": "UKD",
     "order": 5,
+    "semiVoted": true,
     "artist": "DJ Lag ft. Jazz Alonso",
     "song": "Oke Oke",
     "youtube": "https://www.youtube.com/watch?v=a42ZKSMn9nU&ab_channel=DJLAG"
@@ -327,6 +333,7 @@ const entries = [
     "group": "semi1",
     "code": "BIF",
     "order": 8,
+    "semiVoted": true,
     "artist": "Mefjus & Camo & Krooked",
     "song": "Sientelo",
     "youtube": "https://www.youtube.com/watch?v=gOpAr0UiT6Q"
@@ -401,6 +408,7 @@ const entries = [
     "artist": "Ride",
     "code": "GDS",
     "group": "semi2",
+    "semiVoted": true,
     "order": 8,
     "song": "Like a Daydream",
     "youtube": "https://youtu.be/8zzo25t_eC8?si=SLOe1D9xKAyNxcmk"
@@ -422,6 +430,8 @@ const entries = [
     "artist": "CMAT",
     "song": "Euro-Country",
     "group": "semi1",
+    "semiVoted": true,
+    "rejuVoted": true,
     "code": "DOI",
     "order": 12,
     "youtube": "https://www.youtube.com/watch?v=_SVNTv44C4g"
@@ -433,6 +443,7 @@ const entries = [
     "code": "MAT",
     "order": 20,
     "artist": "Barry Blum",
+    "semiVoted": true,
     "song": "Yeti Theme",
     "youtube": "https://youtube.com/watch?v=xgqJPmNDo8U"
   },
@@ -442,6 +453,7 @@ const entries = [
     "artist": "MIKA",
     "group": "semi2",
     "code": "FER",
+    "semiVoted": true,
     "order": 3,
     "song": "C'est la vie",
     "youtube": "https://www.youtube.com/watch?v=Oe7AU05BuZ8"
@@ -483,6 +495,7 @@ const entries = [
     "participating": true,
     "code": "VYL",
     "group": "semi1",
+    "semiVoted": true,
     "order": 15,
     "artist": "Mr. Hurley & Die Pulveraffen feat. Warkings",
     "song": "All Hail The Captain",
@@ -494,6 +507,7 @@ const entries = [
     "artist": "Csinszka",
     "group": "semi1",
     "code": "INZ",
+    "semiVoted": true,
     "order": 25,
     "song": "Airday",
     "youtube": "https://www.youtube.com/watch?v=6Ed41ISsP0Y&ab_channel=Csinszka"
@@ -505,6 +519,8 @@ const entries = [
     "artist": "Golec uOrkiestra",
     "song": "Ściernisco",
     "group": "semi1",
+    "semiVoted": true,
+    "rejuVoted": true,
     "order": 14,
     "youtube": "https://www.youtube.com/watch?v=yrJ_lzYGJdg"
   },
@@ -525,6 +541,8 @@ const entries = [
     "group": "semi1",
     "order": 24,
     "code": "TCR",
+    "semiVoted": true,
+    "rejuVoted": true,
     "song": "Три девицы",
     "youtube": "https://www.youtube.com/watch?v=0e2Ls3JmJbw"
   },
@@ -599,6 +617,7 @@ const entries = [
     "code": "KON",
     "song": "Grace",
     "group": "semi1",
+    "semiVoted": true,
     "order": 4,
     "youtube": "https://youtu.be/gDGVgueUmBk?si=oXzE5vUO3XHdWNV9"
   },

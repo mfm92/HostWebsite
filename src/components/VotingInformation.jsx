@@ -38,29 +38,30 @@ function FlagImage({ nation }) {
 // Flag + code horizontally compact
 function FlagWithCode({ nation, code }) {
   return (
-    <div className="flex items-center gap-2 mx-1 whitespace-nowrap">
+    <div className="flex-none items-center gap-2 mx-1 whitespace-nowrap">
       <FlagImage nation={nation} />
     </div>
   );
 }
 
-function FlagRow({ label, entries }) {
+function FlagRow({ label, entries, expected }) {
   // Set label width wide enough for the longest label
   return (
-    <div className="flex items-center py-1 w-full select-none">
-      <span className="text-orange-500 uppercase tracking-wide font-semibold text-left w-40 mr-2 shrink-0">
-        {label}
-      </span>
-      <div className="flex overflow-x-auto scrollbar-thin max-w-full">
-        {entries.length === 0 ? (
-          <span className="text-gray-400 text-xs px-2">None yet</span>
-        ) : (
-          entries.map((entry) => (
-            <FlagWithCode key={entry.nation} nation={entry.nation} code={entry.code} />
-          ))
-        )}
-      </div>
-    </div>
+<div className="flex items-center py-1 w-full select-none">
+  <span className="text-orange-500 uppercase tracking-wide font-semibold text-left w-40 mr-2 shrink-0">
+    {label} <span className="text-orange-300">({entries.length}{expected ? `/${expected}` : ""})</span>
+  </span>
+  {/* Only set overflow-x-auto here, no max-w on this div */}
+  <div className="flex overflow-x-auto scrollbar-thin space-x-2">
+    {entries.length === 0 ? (
+      <span className="text-gray-400 text-xs px-2">None yet</span>
+    ) : (
+      entries.map((entry) => (
+        <FlagWithCode key={entry.nation} nation={entry.nation} code={entry.code} />
+      ))
+    )}
+  </div>
+</div>
   );
 }
 
@@ -130,9 +131,9 @@ export default function VotingInfoAndVotes() {
           </div>
 
           {/* Normal votes groupings */}
-          <FlagRow label="Semi 1 (Reg)" entries={filterAndSort(submittedCountries, ["semi1", "pq1"])} />
+          <FlagRow label="Semi 1 (Reg)" entries={filterAndSort(submittedCountries, ["semi1", "pq1"])} expected="29"/>
           <FlagRow label="Semi 1 (ReJu)" entries={filterAndSort(submittedRejuCountries, ["semi2", "pq2"])} />
-          <FlagRow label="Semi 2 (Reg)" entries={filterAndSort(submittedCountries, ["semi2", "pq2"])} />
+          <FlagRow label="Semi 2 (Reg)" entries={filterAndSort(submittedCountries, ["semi2", "pq2"])} expected="28"/>
           <FlagRow label="Semi 2 (ReJu)" entries={filterAndSort(submittedRejuCountries, ["semi1", "pq1"])} />
         </div>
 

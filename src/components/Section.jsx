@@ -34,6 +34,10 @@ const Section = ({ title, entries, flip = true }) => {
 
   // Is this a results tab?
   const isResultsSection = title === "SEMI 1 Results" || title === "SEMI 2 Results";
+  const votingLinesOpen = new Date() < new Date("2025-08-07T17:59:00Z");
+  const votingLinesText = votingLinesOpen
+    ? `${title} - VOTING LINES ARE OPEN`
+    : `${title} - VOTING LINES ARE CLOSED`;
 
   // Banner: Only for Semi 1/Semi 2
   const showBanner = (title === "Semi 1" || title === "Semi 2");
@@ -85,7 +89,10 @@ const Section = ({ title, entries, flip = true }) => {
             {/* Banner row */}
             {showBanner && (
               <div className="w-full">
-                <ScrollBanner participants={bannerEntries} label={`${title} - VOTING LINES ARE OPEN`} />
+                <ScrollBanner
+                  participants={bannerEntries}
+                  label={votingLinesText}
+                />
               </div>
             )}
           </>

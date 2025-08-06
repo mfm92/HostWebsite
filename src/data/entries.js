@@ -43,6 +43,7 @@ const entries = [
     "code": "KIM",
     "artist": "Deloraine",
     "semiVoted": true,
+    "rejuVoted": true,
     "song": "Arkona",
     "youtube": "https://www.youtube.com/watch?v=9Qphhm-Dfx4&embeds_referring_euri=https%3A%2F%2Fwww.escunited.com%2F&source_ve_path=MjM4NTE"
   },
@@ -87,6 +88,8 @@ const entries = [
     "group": "semi1",
     "order": 26,
     "artist": "BLACKPINK",
+    "semiVoted": true,
+    "rejuVoted": true,
     "code": "WISN",
     "song": "뛰어(JUMP)",
     "youtube": "https://youtu.be/CgCVZdcKcqY"
@@ -131,6 +134,7 @@ const entries = [
     "nation": "Cydoni-Gibberia",
     "participating": true,
     "group": "semi2",
+    "rejuVoted": true,
     "order": 4,
     "code": "CYG",
     "artist": "Honningbarna",
@@ -269,6 +273,8 @@ const entries = [
     "participating": true,
     "artist": "Pupociklu Vasara",
     "song": "Ganiņš",
+    "semiVoted": true,
+    "rejuVoted": true,
     "order": 15,
     "group": "pq2",
     pq: true,
@@ -323,6 +329,7 @@ const entries = [
     "group": "semi2",
     "order": 12,
     "code": "CAR",
+    "semiVoted": true,
     "artist": "Teddy Bears ft. Iggy Pop",
     "song": "Punkrocker",
     "youtube": "https://www.youtube.com/watch?v=4lYIhKhgIuY"
@@ -465,6 +472,8 @@ const entries = [
     "group": "semi2",
     "code": "NBS",
     "order": 18,
+    "semiVoted": true,
+    "rejuVoted": true,
     "song": "DEAD DISCO",
     "youtube": "https://youtu.be/ZWJl-NWvV4E?list=RDZWJl-NWvV4E"
   },

@@ -363,6 +363,7 @@ const entries = [
     "group": "semi1",
     "order": 3,
     "code": "ZOM",
+    "semiVoted": true,
     "song": "Luukered",
     "youtube": "https://www.youtube.com/watch?v=PBHce3_47wU"
   },

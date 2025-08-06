@@ -143,6 +143,9 @@ export default function VotingInfoAndVotes() {
             Latest update: {commitDate}
           </div>
         )}
+        <div className="mt-4 text-xs text-gray-400">
+          👉 <span className="font-semibold">Note:</span> Can't see your flag? Scroll horizontally!
+        </div>
       </div>
     </div>
   );

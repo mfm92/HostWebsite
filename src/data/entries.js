@@ -485,6 +485,7 @@ const entries = [
     "participating": true,
     "artist": "RoBERT",
     "code": "REK",
+    "semiVoted": true,
     "group": "semi1",
     "order": 11,
     "song": "Tout ce qu'on dit de toi",

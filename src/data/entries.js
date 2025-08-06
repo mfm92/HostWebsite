@@ -428,6 +428,7 @@ const entries = [
     "order": 23,
     "code": "YAP",
     "semiVoted": true,
+    "rejuVoted": true,
     "artist": "Babychair x teeBai",
     "song": "Time",
     "youtube": "https://www.youtube.com/watch?v=hL4vkS4H0Uo"
@@ -574,6 +575,7 @@ const entries = [
     "group": "semi2",
     "order": 22,
     "code": "END",
+    "semiVoted": true,
     "song": "Mon cœur tu es fou",
     "youtube": "https://youtu.be/myM25b5QpCY?si=pcR1UM7k9EXV4Uu_"
   },

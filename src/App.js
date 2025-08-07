@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate, Navigate } from "react-router-dom";
 
 import Section from "./components/Section";
@@ -7,7 +7,6 @@ import { entries } from "./data/entries";
 import TabButton from "./components/TabButton";
 import TitleBanner from "./components/TitleBanner";
 import IntermittentBanner from "./components/IntermittentBanner";
-import VotingInformation from "./components/VotingInformation";
 
 // Make this helper outside the App component
 const tabs = [
@@ -17,7 +16,9 @@ const tabs = [
   { key: "semi2Results", path: "/semi2-results", label: "SEMI 2 NQ Results", group: "semi2" },
   { key: "semi1RJResults", path: "/semi1-rj-esults", label: "SEMI 1 RJ NQ Results", group: "semi1" },
   { key: "semi2RJResults", path: "/semi2-rj-results", label: "SEMI 2 RJ NQ Results", group: "semi2" },
+  { key: "final", path: "/final", label: "Final", group: "final" },
 ];
+
 
 function TabsNav() {
   const location = useLocation();
@@ -32,7 +33,7 @@ function TabsNav() {
   const visibleTabs = tabs
     .map(tab => ({
       ...tab,
-      entries: entries.filter(e => e.group === tab.group),
+      entries: entries.filter(e => e.group.includes(tab.group)),
     }))
     .filter(tab => tab.entries.length > 0);
 
@@ -56,7 +57,7 @@ function SectionsRoutes() {
   const visibleTabs = tabs
     .map(tab => ({
       ...tab,
-      entries: entries.filter(e => e.group === tab.group),
+      entries: entries.filter(e => e.group.includes(tab.group)),
     }))
     .filter(tab => tab.entries.length > 0);
 
@@ -100,6 +101,7 @@ export default function App() {
         <TitleBanner/>
         <TabsNav />
         <SectionsRoutes />
+        {/* Only show this banner on results pages */}
         <IntermittentBanner />
       </main>
     </Router>

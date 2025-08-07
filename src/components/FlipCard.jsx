@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import "../styles/ParticipationCard.css"; // New: Import the CSS
+import React from "react";
+import "../styles/ParticipationCard.css"; // Keep your CSS import if needed
 
 function FlagImage({ nation }) {
   const extensions = ["png", "jpeg", "jpg"];
-  const [extIndex, setExtIndex] = useState(0);
-  const [src, setSrc] = useState(`/flags/${nation}.${extensions[0]}`);
+  const [extIndex, setExtIndex] = React.useState(0);
+  const [src, setSrc] = React.useState(`/flags/${nation}.${extensions[0]}`);
 
-  // Whenever nation changes, reset extIndex and src!
   React.useEffect(() => {
     setExtIndex(0);
     setSrc(`/flags/${nation}.${extensions[0]}`);
@@ -33,7 +32,6 @@ function FlagImage({ nation }) {
   );
 }
 
-
 const CardContent = ({ entry }) => (
   <div className="flex flex-col space-y-2 items-center w-full">
     <div className="w-16 h-16 mb-2 rounded-full overflow-hidden shadow-lg ring-2 ring-white/50 flex items-center justify-center bg-white/10 flag-shine">
@@ -56,10 +54,13 @@ const CardContent = ({ entry }) => (
   </div>
 );
 
-const FlipCard = ({ entry }) => {
+const FlipCard = ({ entry, showFinalOrder = false }) => {
+  // Use finalOrder if showFinalOrder is true and finalOrder exists, else order
+  const displayOrder = showFinalOrder ? (entry.finalOrder ?? entry.order) : entry.order;
+
   return (
     <div className="relative w-72 h-44 cursor-pointer transition-shadow group select-none font-eurovision">
-      {/* Front side (order and nation only) */}
+      {/* Front side (order/finalOrder and nation) */}
       <div
         className="
           absolute
@@ -82,9 +83,9 @@ const FlipCard = ({ entry }) => {
             tracking-tight leading-none mb-2
             select-none pointer-events-none
           "
-          aria-label={`Running order number ${entry.order}`}
+          aria-label={`Running order number ${displayOrder}`}
         >
-          {entry.order}
+          {displayOrder}
         </span>
         <span
           className="
@@ -101,7 +102,7 @@ const FlipCard = ({ entry }) => {
         </span>
       </div>
 
-      {/* Back side - remains unchanged */}
+      {/* Back side */}
       <a
         href={entry.youtube}
         target="_blank"

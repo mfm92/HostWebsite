@@ -74,7 +74,7 @@ function filterAndSort(entriesArray, groups) {
 }
 
 export default function VotingInfoAndVotes() {
-  const submittedCountries = entries.filter((entry) => entry.semiVoted);
+  const submittedCountries = entries.filter((entry) => entry.finalVoted);
   const submittedRejuCountries = entries.filter((entry) => entry.rejuVoted);
 
   const commitDateRaw = process.env.REACT_APP_GIT_COMMIT_DATE || "";
@@ -98,7 +98,7 @@ export default function VotingInfoAndVotes() {
       {/* Left panel - instructions */}
       <div className="relative w-full md:w-2/5 max-w-lg mx-auto text-center background-blur-xl p-10 rounded-2xl bg-zinc-800/50 shadow-lg border-t-4 border-b-4 border-orange-400/70 mb-10 md:mb-0 flex-grow-0 select-none">
         <div className="text-white text-2xl font-extrabold mb-3 uppercase tracking-wide">
-          Send your votes! (Both Regular and Reju)
+          Send your votes! (Both Regular and Waiting List Jury)
         </div>
         <ul className="text-orange-50 text-base space-y-2 mx-auto">
           <li>
@@ -131,10 +131,7 @@ export default function VotingInfoAndVotes() {
           </div>
 
           {/* Normal votes groupings */}
-          <FlagRow label="Semi 1 (Reg)" entries={filterAndSort(submittedCountries, ["semi1", "pq1"])} expected="29"/>
-          <FlagRow label="Semi 1 (ReJu)" entries={filterAndSort(submittedRejuCountries, ["semi2", "pq2"])} />
-          <FlagRow label="Semi 2 (Reg)" entries={filterAndSort(submittedCountries, ["semi2", "pq2"])} expected="28"/>
-          <FlagRow label="Semi 2 (ReJu)" entries={filterAndSort(submittedRejuCountries, ["semi1", "pq1"])} />
+          <FlagRow label="FINAL" entries={filterAndSort(submittedCountries, ["semi1", "pq1", "semi2", "pq2"])} expected="57"/>
         </div>
 
         {/* Commit/build info */}

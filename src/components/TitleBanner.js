@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 // Voting deadline: August 7, 19:59 CEST (17:59 UTC)
-const DEADLINE = new Date("2025-08-07T17:59:00Z");
+const DEADLINE = new Date("2025-08-16T21:59:00Z");
 
 function getTimeRemaining() {
   const now = new Date();
@@ -52,11 +52,8 @@ export default function TitleBanner() {
             ))}
           </div>
           <div>
-            <span className="text-orange-300 font-semibold text-lg">Deadline to send votes:</span>
-            <span className="text-white font-extrabold"> August 7 (7:59PM, CEST)</span>
-          </div>
-          <div className="text-red-600 text-2xl font-semibold animate-bounce mt-3 font-proximanova">
-            Not a midnight deadline!
+            <span className="text-orange-300 font-semibold text-lg">Deadline to send votes for the final:</span>
+            <span className="text-white font-extrabold"> August 16 (11:59PM, CEST)</span>
           </div>
         </div>
       </div>

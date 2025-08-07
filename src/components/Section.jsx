@@ -47,7 +47,7 @@ const Section = ({ title, entries, flip = true }) => {
   const isResultsSection = title === "SEMI 1 NQ Results" || title === "SEMI 2 NQ Results" ||
     title === "SEMI 1 RJ NQ Results" || title === "SEMI 2 RJ NQ Results";
   const reju = title.endsWith("RJ NQ Results");
-  const votingLinesOpen = new Date() < new Date("2025-08-07T17:59:00Z");
+  const votingLinesOpen = new Date() < new Date("2025-08-16T21:59:00Z");
   const votingLinesText = votingLinesOpen
     ? `${title} - VOTING LINES ARE OPEN`
     : `${title} - VOTING LINES ARE CLOSED`;

@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animated-backgrounds": "^2.0.0",
     "classnames": "^2.5.1",
-    "framer-motion": "^12.23.6",
+    "framer-motion": "^12.23.12",
     "postcss-loader": "^8.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

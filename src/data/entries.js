@@ -22,7 +22,11 @@ const entries = [
     "artist": "Sublahshini, Anirudh Ravichander, Asal Kolaar",
     "song": "Monica",
     "code": "MAR",
-    "youtube": "https://www.youtube.com/watch?v=2qCpY38ompo"
+    "youtube": "https://www.youtube.com/watch?v=2qCpY38ompo",
+    "resultPlace": 25,
+    "resultPoints": 24,
+    "rejuPlace": 18,
+    "rejuPoints": 28
   },
   {
     "nation": "Emsfrynt",
@@ -79,6 +83,10 @@ const entries = [
     "code": "SAK",
     "group": "semi2",
     "order": 10,
+    "resultPlace": 11,
+    "resultPoints": 75,
+    "rejuPlace": 18,
+    "rejuPoints": 28,
     "song": "Turn Back Time",
     "youtube": "https://www.youtube.com/watch?v=Ls0WfopgR9k"
   },
@@ -104,7 +112,11 @@ const entries = [
     "rejuVoted": true,
     "order": 9,
     "song": "Coquillages",
-    "youtube": "https://youtu.be/wqK3N9JBIaQ?list=RDwqK3N9JBIaQ"
+    "youtube": "https://youtu.be/wqK3N9JBIaQ?list=RDwqK3N9JBIaQ",
+    "rejuPlace": 10,
+    "rejuPoints": 41,
+    "resultPlace": 18,
+    "resultPoints": 50
   },
   {
     "nation": "Roseland",
@@ -116,7 +128,11 @@ const entries = [
     "rejuVoted": true,
     "artist": "Miley Cyrus feat. Naomi Campbell",
     "song": "Every Girl You've Ever Loved",
-    "youtube": "https://www.youtube.com/watch?v=ukTm71Id0uE"
+    "rejuPlace": 20,
+    "rejuPoints": 25,
+    "youtube": "https://www.youtube.com/watch?v=ukTm71Id0uE",
+    "resultPlace": 23,
+    "resultPoints": 43
   },
   {
     "nation": "Ugaly",
@@ -140,7 +156,11 @@ const entries = [
     "artist": "Honningbarna",
     "semiVoted": true,
     "song": "Rød bic",
-    "youtube": "https://www.youtube.com/watch?v=OukwwhubczQ"
+    "youtube": "https://www.youtube.com/watch?v=OukwwhubczQ",
+    "rejuPlace": 8,
+    "rejuPoints": 43,
+    "resultPlace": 13,
+    "resultPoints": 65
   },
   {
     "nation": "Tanoiro",
@@ -152,7 +172,11 @@ const entries = [
     "rejuVoted": true,
     "artist": "la euphoria, moistbreezy",
     "song": "Heaven’s Where You Are",
-    "youtube": "https://www.youtube.com/watch?v=NOpk9xo2EWQ"
+    "youtube": "https://www.youtube.com/watch?v=NOpk9xo2EWQ",
+    "rejuPlace": 24,
+    "rejuPoints": 17,
+    "resultPlace": 17,
+    "resultPoints": 53,
   },
   {
     "nation": "Kamandé",
@@ -163,7 +187,11 @@ const entries = [
     "semiVoted": true,
     "artist": "Shania Twain",
     "song": "Giddy Up!",
-    "youtube": "https://www.youtube.com/watch?v=-6BGu-GyKWQ"
+    "youtube": "https://www.youtube.com/watch?v=-6BGu-GyKWQ",
+    "rejuPlace": 20,
+    "rejuPoints": 24,
+    "resultPlace": 19,
+    "resultPoints": 49
   },
   {
     "nation": "Fierraria",
@@ -197,7 +225,11 @@ const entries = [
     "semiVoted": true,
     "order": 2,
     "song": "Balenciaga Covered Eyes",
-    "youtube": "https://youtu.be/WI1Agrdf3bA?si=c4gPAI0Jt0rAMnDr"
+    "youtube": "https://youtu.be/WI1Agrdf3bA?si=c4gPAI0Jt0rAMnDr",
+    "resultPlace": 19,
+    "rejuPlace": 20,
+    "rejuPoints": 25,
+    "resultPoints": 52
   },
   {
     "nation": "Svobodnia",
@@ -219,7 +251,11 @@ const entries = [
     "rejuVoted": true,
     "order": 23,
     "song": "Hate",
-    "youtube": "https://www.youtube.com/watch?v=ayit1E_MZAM"
+    "youtube": "https://www.youtube.com/watch?v=ayit1E_MZAM",
+    "resultPlace": 23,
+    "rejuPlace": 9,
+    "rejuPoints": 42,
+    "resultPoints": 26
   },
   {
     "nation": "Szimbaya Kingdom",
@@ -241,8 +277,12 @@ const entries = [
     "group": "semi1",
     "code": "RWR",
     "order": 9,
+    "rejuPlace": 19,
+    "rejuPoints": 26,
     "song": "Bad Dreams",
-    "youtube": "https://www.youtube.com/watch?v=Qh8QwVYOSVU"
+    "youtube": "https://www.youtube.com/watch?v=Qh8QwVYOSVU",
+    "resultPlace": 12,
+    "resultPoints": 65
   },
   {
     "nation": "Meridia",
@@ -253,7 +293,11 @@ const entries = [
     "artist": "Nilusi",
     "semiVoted": true,
     "song": "Boru Kata",
-    "youtube": "https://youtu.be/4Y1djb7v-jo"
+    "rejuPlace": 12,
+    "rejuPoints": 35,
+    "youtube": "https://youtu.be/4Y1djb7v-jo",
+    "resultPlace": 15,
+    "resultPoints": 57
   },
   {
     "nation": "Papendink",
@@ -297,8 +341,12 @@ const entries = [
     "order": 1,
     "code": "VER",
     "artist": "Arilena Ara",
+    "rejuPlace": 14,
+    "rejuPoints": 40,
     "song": "Weightless",
-    "youtube": "https://youtu.be/wzPy6vG0gEE?si=GcgxcXhHN1UP3QsS"
+    "youtube": "https://youtu.be/wzPy6vG0gEE?si=GcgxcXhHN1UP3QsS",
+    "resultPlace": 13,
+    "resultPoints": 63
   },
   {
     "nation": "United Kingdom of Destrion",
@@ -309,7 +357,11 @@ const entries = [
     "semiVoted": true,
     "artist": "DJ Lag ft. Jazz Alonso",
     "song": "Oke Oke",
-    "youtube": "https://www.youtube.com/watch?v=a42ZKSMn9nU&ab_channel=DJLAG"
+    "rejuPlace": 5,
+    "rejuPoints": 51,
+    "youtube": "https://www.youtube.com/watch?v=a42ZKSMn9nU&ab_channel=DJLAG",
+    "resultPlace": 25,
+    "resultPoints": 10
   },
   {
     "nation": "Södermalm",
@@ -328,11 +380,15 @@ const entries = [
     "participating": true,
     "group": "semi2",
     "order": 12,
+    "rejuPlace": 22,
+    "rejuPoints": 22,
     "code": "CAR",
     "semiVoted": true,
     "artist": "Teddy Bears ft. Iggy Pop",
     "song": "Punkrocker",
-    "youtube": "https://www.youtube.com/watch?v=4lYIhKhgIuY"
+    "youtube": "https://www.youtube.com/watch?v=4lYIhKhgIuY",
+    "resultPlace": 12,
+    "resultPoints": 73
   },
   {
     "nation": "Biflovatia",
@@ -340,10 +396,14 @@ const entries = [
     "group": "semi1",
     "code": "BIF",
     "order": 8,
+    "rejuPlace": 25,
+    "rejuPoints": 16,
     "semiVoted": true,
     "artist": "Mefjus & Camo & Krooked",
     "song": "Sientelo",
-    "youtube": "https://www.youtube.com/watch?v=gOpAr0UiT6Q"
+    "youtube": "https://www.youtube.com/watch?v=gOpAr0UiT6Q",
+    "resultPlace": 18,
+    "resultPoints": 52
   },
   {
     "nation": "Comino",
@@ -352,9 +412,13 @@ const entries = [
     "group": "semi1",
     "semiVoted": true,
     "order": 19,
+    "rejuPlace": 23,
+    "rejuPoints": 20,
     "code": "COM",
     "song": "Catch These Fists",
-    "youtube": "https://youtu.be/6Kjz89xYmS4?si=NGhSpV9clQDkDDnm"
+    "youtube": "https://youtu.be/6Kjz89xYmS4?si=NGhSpV9clQDkDDnm",
+    "resultPlace": 22,
+    "resultPoints": 46
   },
   {
     "nation": "Zombira",
@@ -375,8 +439,12 @@ const entries = [
     "order": 1,
     "semiVoted": true,
     "code": "HAL",
+    "rejuPlace": 23,
+    "rejuPoints": 21,
     "song": "ANYTHING 4 U",
-    "youtube": "https://www.youtube.com/watch?v=jjellZ6ml9U"
+    "youtube": "https://www.youtube.com/watch?v=jjellZ6ml9U",
+    "resultPlace": 24,
+    "resultPoints": 26
   },
   {
     "nation": "Trollheimr",
@@ -396,9 +464,13 @@ const entries = [
     "group": "semi2",
     "order": 11,
     "code": "T&D",
+    "rejuPlace": 25,
+    "rejuPoints": 15,
     "artist": "Caroline Kingsbury",
     "song": "Shock Treatment",
-    "youtube": "https://youtu.be/_-QKvoV2ofs?si=EHz4x9ik19IOuvBz"
+    "youtube": "https://youtu.be/_-QKvoV2ofs?si=EHz4x9ik19IOuvBz",
+    "resultPlace": 22,
+    "resultPoints": 27
   },
   {
     "nation": "Reym-L-Dneurb",
@@ -408,7 +480,11 @@ const entries = [
     "code": "RLD",
     "artist": "Anna Buchegger",
     "song": "Kim Vorbei",
-    "youtube": "https://www.youtube.com/watch?v=mnOUj4pvOPU"
+    "rejuPlace": 10,
+    "rejuPoints": 45,
+    "youtube": "https://www.youtube.com/watch?v=mnOUj4pvOPU",
+    "resultPlace": 21,
+    "resultPoints": 48
   },
   {
     "nation": "Grand Duchy of Strenci",
@@ -428,10 +504,14 @@ const entries = [
     "order": 23,
     "code": "YAP",
     "semiVoted": true,
+    "rejuPlace": 8,
+    "rejuPoints": 46,
     "rejuVoted": true,
     "artist": "Babychair x teeBai",
     "song": "Time",
-    "youtube": "https://www.youtube.com/watch?v=hL4vkS4H0Uo"
+    "youtube": "https://www.youtube.com/watch?v=hL4vkS4H0Uo",
+    "resultPlace": 20,
+    "resultPoints": 50
   },
   {
     "nation": "Doire",
@@ -443,7 +523,11 @@ const entries = [
     "rejuVoted": true,
     "code": "DOI",
     "order": 12,
-    "youtube": "https://www.youtube.com/watch?v=_SVNTv44C4g"
+    "youtube": "https://www.youtube.com/watch?v=_SVNTv44C4g",
+    "resultPlace": 15,
+    "resultPoints": 59,
+    "rejuPlace": 4,
+    "rejuPoints": 55
   },
   {
     "nation": "MatiMati",
@@ -454,7 +538,11 @@ const entries = [
     "artist": "Barry Blum",
     "semiVoted": true,
     "song": "Yeti Theme",
-    "youtube": "https://youtube.com/watch?v=xgqJPmNDo8U"
+    "youtube": "https://youtube.com/watch?v=xgqJPmNDo8U",
+    "resultPlace": 21,
+    "rejuPlace": 15,
+    "rejuPoints": 32,
+    "resultPoints": 34
   },
   {
     "nation": "Fervorosia",
@@ -465,7 +553,11 @@ const entries = [
     "semiVoted": true,
     "order": 3,
     "song": "C'est la vie",
-    "youtube": "https://www.youtube.com/watch?v=Oe7AU05BuZ8"
+    "youtube": "https://www.youtube.com/watch?v=Oe7AU05BuZ8",
+    "resultPlace": 14,
+    "resultPoints": 61,
+    "rejuPlace": 24,
+    "rejuPoints": 17,
   },
   {
     "nation": "New Bander State",
@@ -489,7 +581,11 @@ const entries = [
     "song": "Whatever",
     "semiVoted": true,
     "code": "DAL",
-    "youtube": "https://www.youtube.com/watch?v=jVHfhEhAXE4&ab_channel=Zimmer90"
+    "youtube": "https://www.youtube.com/watch?v=jVHfhEhAXE4&ab_channel=Zimmer90",
+    "resultPlace": 17,
+    "resultPoints": 50,
+    "rejuPlace": 11,
+    "rejuPoints": 38,
   },
   {
     "nation": "Rehi Kaita",
@@ -522,7 +618,11 @@ const entries = [
     "semiVoted": true,
     "order": 25,
     "song": "Airday",
-    "youtube": "https://www.youtube.com/watch?v=6Ed41ISsP0Y&ab_channel=Csinszka"
+    "youtube": "https://www.youtube.com/watch?v=6Ed41ISsP0Y&ab_channel=Csinszka",
+    "resultPlace": 11,
+    "resultPoints": 65,
+    "rejuPlace": 20,
+    "rejuPoints": 25,
   },
   {
     "nation": "Rumia",
@@ -544,7 +644,11 @@ const entries = [
     "group": "semi1",
     "order": 16,
     "song": "Luna",
-    "youtube": "https://www.youtube.com/watch?v=D0QT3ZULTaI"
+    "youtube": "https://www.youtube.com/watch?v=D0QT3ZULTaI",
+    "resultPlace": 26,
+    "resultPoints": 23,
+    "rejuPlace": 26,
+    "rejuPoints": 12,
   },
   {
     "nation": "Tcher-Racoi",
@@ -566,7 +670,11 @@ const entries = [
     "order": 17,
     "code": "CAL",
     "song": "Why'd You Think I Called You On The Phone?",
-    "youtube": "https://www.youtube.com/watch?v=qxCuRDXyrlI"
+    "youtube": "https://www.youtube.com/watch?v=qxCuRDXyrlI",
+    "resultPlace": 24,
+    "resultPoints": 39,
+    "rejuPlace": 6,
+    "rejuPoints": 52,
   },
   {
     "nation": "Endórë",
@@ -589,7 +697,11 @@ const entries = [
     "order": 7,
     "artist": "Natalia Doco and Devendra Banhart",
     "song": "Quedate Luna",
-    "youtube": "https://www.youtube.com/watch?v=oRW4pSg64WY&ab_channel=millemon-electronic%2Fworldmusic"
+    "youtube": "https://www.youtube.com/watch?v=oRW4pSg64WY&ab_channel=millemon-electronic%2Fworldmusic",
+    "resultPlace": 20,
+    "resultPoints": 43,
+    "rejuPlace": 21,
+    "rejuPoints": 23,
   },
   {
     "nation": "Belvist",
@@ -610,7 +722,11 @@ const entries = [
     "group": "semi1",
     "order": 5,
     "song": "Opening Out",
-    "youtube": "https://www.youtube.com/watch?v=wiD8PeY3vBM"
+    "youtube": "https://www.youtube.com/watch?v=wiD8PeY3vBM",
+    "resultPlace": 14,
+    "resultPoints": 59,
+    "rejuPlace": 12,
+    "rejuPoints": 44,
   },
   {
     "nation": "Xochimilia",

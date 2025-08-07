@@ -33,7 +33,9 @@ const Section = ({ title, entries, flip = true }) => {
   const total = 60; // Adjust as needed
 
   // Is this a results tab?
-  const isResultsSection = title === "SEMI 1 Results" || title === "SEMI 2 Results";
+  const isResultsSection = title === "SEMI 1 NQ Results" || title === "SEMI 2 NQ Results" ||
+    title === "SEMI 1 RJ NQ Results" || title === "SEMI 2 RJ NQ Results";
+  const reju = title.endsWith("RJ NQ Results");
   const votingLinesOpen = new Date() < new Date("2025-08-07T17:59:00Z");
   const votingLinesText = votingLinesOpen
     ? `${title} - VOTING LINES ARE OPEN`
@@ -97,7 +99,7 @@ const Section = ({ title, entries, flip = true }) => {
             )}
           </>
         ) : (
-          <ResultsTable entries={entries} />
+          <ResultsTable entries={entries} reju={reju}/>
         )}
       </div>
     </section>

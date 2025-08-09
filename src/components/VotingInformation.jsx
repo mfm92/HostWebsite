@@ -68,9 +68,15 @@ function FlagRow({ label, entries, expected }) {
 
 // Reusable filter + sort by groups helper
 function filterAndSort(entriesArray, groups) {
-  return entriesArray
-    .filter((entry) => groups.includes(entry.group))
-    .sort((a, b) => (a.nation > b.nation ? 1 : -1));
+  const groupsSet = new Set(groups);
+const sorted = entriesArray
+  .filter((entry) => {
+    const entryGroups = Array.isArray(entry.group) ? entry.group : [entry.group];
+    return entryGroups.some(group => groupsSet.has(group));
+  })
+  .sort((a, b) => (a.nation > b.nation ? 1 : -1));
+
+  return sorted;
 }
 
 export default function VotingInfoAndVotes() {

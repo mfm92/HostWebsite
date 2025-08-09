@@ -138,6 +138,7 @@ export default function VotingInfoAndVotes() {
 
           {/* Normal votes groupings */}
           <FlagRow label="FINAL" entries={filterAndSort(submittedCountries, ["semi1", "pq1", "semi2", "pq2"])} expected="57"/>
+          <div className="mt-2 text-xs">Waiting List: Dez Republic</div>
         </div>
 
         {/* Commit/build info */}

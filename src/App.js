@@ -8,7 +8,7 @@ import TabButton from "./components/TabButton";
 import TitleBanner from "./components/TitleBanner";
 import IntermittentBanner from "./components/IntermittentBanner";
 import VotingInformation from "./components/VotingInformation";
-
+import AnimatedVoteDisplay from "./components/AnimatedVoteDisplay";
 // Make this helper outside the App component
 const tabs = [
   { key: "semi1", path: "/semi1", label: "SF1", group: "semi1" },

@@ -2,7 +2,7 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import { entries as initialEntries } from "../data/entries";
-import { votes } from "../data/votesFake";
+import { votes } from "../data/votes";
 
 const POINTS_ORDER = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12];
 
@@ -37,7 +37,7 @@ function FlagImage({ nation }) {
   );
 }
 
-export default function AnimatedVoteDisplay() {
+export default function AnimatedVoteDisplay({ fastMode = false }) {
   const [nations, setNations] = useState(
     initialEntries
       .filter(e => e.group.includes("final"))
@@ -45,7 +45,7 @@ export default function AnimatedVoteDisplay() {
   );
   const [announcingIndex, setAnnouncingIndex] = useState(0);
   const [announcingCode, setAnnouncingCode] = useState(null);
-  const [pendingVotesMap, setPendingVotesMap] = useState({}); // now array per recipient
+  const [pendingVotesMap, setPendingVotesMap] = useState({});
   const [glowCode, setGlowCode] = useState(null);
   const [receivedMap, setReceivedMap] = useState({});
   const [isVoting, setIsVoting] = useState(false);
@@ -65,65 +65,76 @@ export default function AnimatedVoteDisplay() {
       return obj;
     }, {});
 
-  const announceVotes = useCallback(() => {
-    if (isVoting) return;
-    clearAllTimeouts();
-    const countryCodes = Object.keys(votes);
-    const code = countryCodes[announcingIndex];
-    setAnnouncingCode(code);
-    setIsVoting(true);
+const announceVotes = useCallback(() => {
+  if (isVoting) return;
 
-    const nationVotes = votes[code];
-    let now = 0;
+  clearAllTimeouts();
 
-    POINTS_ORDER.forEach(points => {
-      const recipientCode = nationVotes[points];
-      votingTimeouts.current.push(
-        setTimeout(() => {
-          setNations(prev => {
-            setPrevRanks(prev.reduce((acc, n, idx) => ({ ...acc, [n.code]: idx }), {}));
-            return [...prev]
-              .map(n => (n.code === recipientCode
-                ? { ...n, points: (n.points ?? 0) + points }
-                : { ...n, points: n.points ?? 0 }))
-              .sort((a, b) => b.points - a.points);
-          });
+  const countryCodes = Object.keys(votes);
+  const code = countryCodes[announcingIndex];
 
-          // append this award to the recipient’s list
-          setPendingVotesMap(prev => ({
-            ...prev,
-            [recipientCode]: [...(prev[recipientCode] || []), points]
-          }));
+  // If no more voters left, do nothing
+  if (!code) return;
 
-          setReceivedMap(prev => ({
-            ...prev,
-            [code]: { ...(prev[code] || {}), [recipientCode]: true }
-          }));
+  setAnnouncingCode(code);
+  setIsVoting(true);
 
-          if (points === 12) setGlowCode(recipientCode);
-        }, now)
-      );
+  // Votes from the current announcing country
+  const nationVotes = votes[code];
+  let updated = [...nations];
 
-      votingTimeouts.current.push(
-        setTimeout(() => {
-          if (points === 12) setGlowCode(null);
-        }, now + (points === 12 ? 2200 : 1300))
-      );
+  // Create a new pending votes map for badges
+  const newPendingMap = { ...pendingVotesMap };
 
-      now += points === 12 ? 2600 : 1700;
-    });
+  // Apply all points from this country instantly
+  POINTS_ORDER.forEach(points => {
+    const recipientCode = nationVotes[points];
 
-    votingTimeouts.current.push(
-      setTimeout(() => setIsVoting(false), now)
+    updated = updated.map(n =>
+      n.code === recipientCode
+        ? { ...n, points: (n.points ?? 0) + points }
+        : n
     );
-  }, [announcingIndex, isVoting]);
+
+    // Track badges for display for this turn
+    newPendingMap[recipientCode] = [
+      ...(newPendingMap[recipientCode] || []),
+      points
+    ];
+  });
+
+  // Sort after applying all points
+  updated.sort((a, b) => b.points - a.points);
+  setNations(updated);
+
+  // Mark which recipients got votes from this voter
+  setReceivedMap(prev => ({
+    ...prev,
+    [code]: POINTS_ORDER.reduce((acc, pts) => {
+      acc[nationVotes[pts]] = true;
+      return acc;
+    }, {})
+  }));
+
+  // Show glow highlight for the 12-pointer briefly
+  const twelveCode = nationVotes[12];
+  if (twelveCode) {
+    setGlowCode(twelveCode);
+    setTimeout(() => setGlowCode(null), 2000);
+  }
+
+  // Save badge info and finish
+  setPendingVotesMap(newPendingMap);
+  setIsVoting(false);
+}, [announcingIndex, isVoting, nations, pendingVotesMap]);
+
 
   const handleNext = () => {
     if (isVoting) return;
     setAnnouncingIndex(idx => Math.min(idx + 1, Object.keys(votes).length - 1));
     setAnnouncingCode(null);
     setPendingVotesMap({});
-    setGlowCode(null);
+    //setGlowCode(null);
   };
 
   const countryReceivedFromCurrent = nationCode =>
@@ -145,17 +156,17 @@ export default function AnimatedVoteDisplay() {
               : glowCode === nation.code
               ? "border-yellow-500"
               : (pendingVotesMap[nation.code] && pendingVotesMap[nation.code].length)
-              ? "border-green-500"
+              ? "border-orange-500"
               : received
-              ? "border-green-300"
+              ? "border-orange-300"
               : "border-gray-600";
           const background =
             glowCode === nation.code
-              ? "bg-yellow-300/50"
+              ? "bg-zinc-300/50"
               : (pendingVotesMap[nation.code] && pendingVotesMap[nation.code].length)
-              ? "bg-green-400/20"
+              ? "bg-orange-400/20"
               : received
-              ? "bg-green-800/10"
+              ? "bg-orange-800/10"
               : "bg-gray-900/90";
           const { prev, now } = rankTransitions[nation.code];
           const overtook = prev > now;
@@ -172,7 +183,7 @@ export default function AnimatedVoteDisplay() {
               stiffness: overtook ? 160 : 700,
               damping: overtook ? 14 : 36,
               mass: overtook ? 2.5 : 1,
-              duration: overtook ? 2.8 : 1.0
+              duration: overtook ? 28 : 1.0
             }
           };
 
@@ -204,7 +215,7 @@ export default function AnimatedVoteDisplay() {
                 key={nation.points}
                 initial={{ scale: 1.15, color: "#fff" }}
                 animate={{ scale: 1, color: "#fff" }}
-                transition={{ type: "spring", stiffness: 700, damping: 27, duration: 10 }}
+                transition={{ type: "spring", stiffness: 700, damping: 27, duration: 1 }}
                 className="ml-auto text-3xl font-extrabold"
               >
                 {nation.points}
@@ -221,8 +232,8 @@ export default function AnimatedVoteDisplay() {
                     exit={{ opacity: 0, y: 6 }}
                     className={`absolute top-1 bottom-1 px-0 py-1 text-2xl font-bold rounded shadow-md border z-10
                       ${pt === 12
-                        ? "bg-yellow-500 text-black border-yellow-100"
-                        : "bg-green-600 text-white border-green-200"
+                        ? "bg-zinc-500 text-black border-zinc-100"
+                        : "bg-orange-600 text-white border-orange-200"
                       }`}
                     style={{ left: `6px`, width: "62px", textAlign: "center" }}
                   >
@@ -243,6 +254,7 @@ export default function AnimatedVoteDisplay() {
         <RenderColumn nationsList={col1} />
         <RenderColumn nationsList={col2} />
       </div>
+
       {/* Voting nation */}
       <div className="w-80 flex-shrink-0 flex flex-col gap-4 items-center justify-start pt-2">
         {announcingCode && (
@@ -269,7 +281,7 @@ export default function AnimatedVoteDisplay() {
           disabled={isVoting || announcingIndex >= Object.keys(votes).length}
           className="mt-10 px-6 py-4 w-full bg-orange-600 text-white rounded-lg shadow hover:bg-orange-700 disabled:opacity-60 disabled:cursor-not-allowed font-bold text-2xl transition"
         >
-          {announcingCode ? "Next Nation" : "Start Voting"}
+          {announcingCode ? "Next Nation" : fastMode ? "Reveal Final Scores" : "Start Voting"}
         </button>
       </div>
     </div>

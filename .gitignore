@@ -10,6 +10,7 @@
 
 src/data/votes.js
 
+src/data/parseVotes/semifinal2.csv
 # production
 /build
 

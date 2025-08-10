@@ -1,5 +1,4 @@
 // components/AnimatedVoteDisplay.jsx
-
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import { entries as initialEntries } from "../data/entries";
@@ -42,11 +41,11 @@ export default function AnimatedVoteDisplay() {
   const [nations, setNations] = useState(
     initialEntries
       .filter(e => e.group.includes("final"))
-      .map(e => ({ ...e, points: e.points ?? 0 })) // ensure points is always 0 if missing
+      .map(e => ({ ...e, points: e.points ?? 0 }))
   );
   const [announcingIndex, setAnnouncingIndex] = useState(0);
   const [announcingCode, setAnnouncingCode] = useState(null);
-  const [pendingVote, setPendingVote] = useState(null);
+  const [pendingVotesMap, setPendingVotesMap] = useState({}); // now array per recipient
   const [glowCode, setGlowCode] = useState(null);
   const [receivedMap, setReceivedMap] = useState({});
   const [isVoting, setIsVoting] = useState(false);
@@ -59,7 +58,6 @@ export default function AnimatedVoteDisplay() {
 
   const clearAllTimeouts = () => votingTimeouts.current.forEach(clearTimeout);
 
-  // Helper for visible overtaking: get a map of code to (prevRank, newRank)
   const getRankTransitions = (prevRanks, currNations) =>
     currNations.reduce((obj, n, i) => {
       const prev = prevRanks[n.code];
@@ -67,7 +65,6 @@ export default function AnimatedVoteDisplay() {
       return obj;
     }, {});
 
-  // --- Main vote reveal logic ---
   const announceVotes = useCallback(() => {
     if (isVoting) return;
     clearAllTimeouts();
@@ -79,31 +76,40 @@ export default function AnimatedVoteDisplay() {
     const nationVotes = votes[code];
     let now = 0;
 
-    POINTS_ORDER.forEach((points) => {
+    POINTS_ORDER.forEach(points => {
       const recipientCode = nationVotes[points];
       votingTimeouts.current.push(
         setTimeout(() => {
           setNations(prev => {
             setPrevRanks(prev.reduce((acc, n, idx) => ({ ...acc, [n.code]: idx }), {}));
-            // "prevRanks" is always before this update
             return [...prev]
-              .map(n => (n.code === recipientCode ? { ...n, points: n.points + points } : n))
+              .map(n => (n.code === recipientCode
+                ? { ...n, points: (n.points ?? 0) + points }
+                : { ...n, points: n.points ?? 0 }))
               .sort((a, b) => b.points - a.points);
           });
-          setPendingVote({ recipient: recipientCode, points });
+
+          // append this award to the recipient’s list
+          setPendingVotesMap(prev => ({
+            ...prev,
+            [recipientCode]: [...(prev[recipientCode] || []), points]
+          }));
+
           setReceivedMap(prev => ({
             ...prev,
             [code]: { ...(prev[code] || {}), [recipientCode]: true }
           }));
+
           if (points === 12) setGlowCode(recipientCode);
         }, now)
       );
+
       votingTimeouts.current.push(
         setTimeout(() => {
-          setPendingVote(null);
           if (points === 12) setGlowCode(null);
         }, now + (points === 12 ? 2200 : 1300))
       );
+
       now += points === 12 ? 2600 : 1700;
     });
 
@@ -112,37 +118,33 @@ export default function AnimatedVoteDisplay() {
     );
   }, [announcingIndex, isVoting]);
 
-  // Move to next voting nation
   const handleNext = () => {
     if (isVoting) return;
     setAnnouncingIndex(idx => Math.min(idx + 1, Object.keys(votes).length - 1));
     setAnnouncingCode(null);
-    setPendingVote(null);
+    setPendingVotesMap({});
     setGlowCode(null);
   };
 
   const countryReceivedFromCurrent = nationCode =>
     announcingCode && receivedMap[announcingCode]?.[nationCode];
 
-  const justReceived = pendingVote && pendingVote.recipient ? pendingVote.recipient : null;
-  const pointsGiven = pendingVote && pendingVote.recipient ? pendingVote.points : null;
-
   const sortedNations = nations.slice(0, 28);
   const col1 = sortedNations.slice(0, 14);
   const col2 = sortedNations.slice(14, 28);
   const rankTransitions = getRankTransitions(prevRanks, sortedNations);
 
-  function RenderColumn({ nationsList, offset }) {
+  function RenderColumn({ nationsList }) {
     return (
       <div className="flex flex-col gap-2 w-full">
-        {nationsList.map((nation, i) => {
+        {nationsList.map(nation => {
           const received = countryReceivedFromCurrent(nation.code);
           const highlight =
             announcingCode === nation.code
               ? "border-orange-500"
               : glowCode === nation.code
               ? "border-yellow-500"
-              : justReceived === nation.code
+              : (pendingVotesMap[nation.code] && pendingVotesMap[nation.code].length)
               ? "border-green-500"
               : received
               ? "border-green-300"
@@ -150,7 +152,7 @@ export default function AnimatedVoteDisplay() {
           const background =
             glowCode === nation.code
               ? "bg-yellow-300/50"
-              : justReceived === nation.code
+              : (pendingVotesMap[nation.code] && pendingVotesMap[nation.code].length)
               ? "bg-green-400/20"
               : received
               ? "bg-green-800/10"
@@ -158,7 +160,6 @@ export default function AnimatedVoteDisplay() {
           const { prev, now } = rankTransitions[nation.code];
           const overtook = prev > now;
 
-          // Slow hover/float and bolder shadow for moving up
           const animateProps = {
             opacity: 1,
             scale: overtook ? 1.18 : 1,
@@ -208,22 +209,26 @@ export default function AnimatedVoteDisplay() {
               >
                 {nation.points}
               </motion.span>
-              {justReceived === nation.code && (
-                <motion.div
-                  key={pointsGiven}
-                  layoutId={`point-badge-${nation.id}`}
-                  initial={{ opacity: 0, y: -6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 6 }}
-                  className={`absolute left-1 width-20 top-1 bottom-1 px-4 py-1 text-2xl font-bold rounded transition-shadow shadow-md border z-10
-                    ${pointsGiven === 12
-                      ? "bg-yellow-500 text-black border-yellow-100 animate-pulse"
-                      : "bg-green-600 text-white border-green-200"
-                    }`}
-                >
-                  {pointsGiven}
-                </motion.div>
-              )}
+
+              {/* All badges for this nation in current round */}
+              {Array.isArray(pendingVotesMap[nation.code]) &&
+                pendingVotesMap[nation.code].map((pt, idx) => (
+                  <motion.div
+                    key={`${nation.code}-${pt}-${idx}`}
+                    layoutId={`point-badge-${nation.id}-${pt}-${idx}`}
+                    initial={{ opacity: 0, y: -6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 6 }}
+                    className={`absolute top-1 bottom-1 px-0 py-1 text-2xl font-bold rounded shadow-md border z-10
+                      ${pt === 12
+                        ? "bg-yellow-500 text-black border-yellow-100"
+                        : "bg-green-600 text-white border-green-200"
+                      }`}
+                    style={{ left: `6px`, width: "62px", textAlign: "center" }}
+                  >
+                    {pt}
+                  </motion.div>
+                ))}
             </motion.div>
           );
         })}
@@ -235,8 +240,8 @@ export default function AnimatedVoteDisplay() {
     <div className="max-w-4xl mx-auto p-6 flex flex-row gap-10">
       {/* Scoreboard */}
       <div className="flex-1 flex flex-row gap-8 items-start w-full">
-        <RenderColumn nationsList={col1} offset={0} />
-        <RenderColumn nationsList={col2} offset={12} />
+        <RenderColumn nationsList={col1} />
+        <RenderColumn nationsList={col2} />
       </div>
       {/* Voting nation */}
       <div className="w-80 flex-shrink-0 flex flex-col gap-4 items-center justify-start pt-2">
@@ -251,19 +256,18 @@ export default function AnimatedVoteDisplay() {
           </>
         )}
         <button
-        onClick={() => {
+          onClick={() => {
             if (announcingCode) {
-            handleNext();
+              handleNext();
             } else {
-            announceVotes();
+              announceVotes();
             }
-        }}
-        disabled={isVoting || announcingIndex >= Object.keys(votes).length}
-        className="mt-10 px-6 py-4 w-full bg-orange-600 text-white rounded-lg shadow hover:bg-orange-700 disabled:opacity-60 disabled:cursor-not-allowed font-bold text-2xl transition"
+          }}
+          disabled={isVoting || announcingIndex >= Object.keys(votes).length}
+          className="mt-10 px-6 py-4 w-full bg-orange-600 text-white rounded-lg shadow hover:bg-orange-700 disabled:opacity-60 disabled:cursor-not-allowed font-bold text-2xl transition"
         >
-        {announcingCode ? "Next Nation" : "Start Voting"}
+          {announcingCode ? "Next Nation" : "Start Voting"}
         </button>
-
       </div>
     </div>
   );

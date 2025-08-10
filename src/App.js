@@ -104,6 +104,8 @@ export default function App() {
         <SectionsRoutes />
         {/* Only show this banner on results pages */}
         <IntermittentBanner />
+        
+        {/* Add a footer or any additional components here */}
       </main>
     </Router>
   );

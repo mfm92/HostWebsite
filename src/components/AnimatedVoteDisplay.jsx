@@ -2,7 +2,7 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import { entries as initialEntries } from "../data/entries";
-import { votes } from "../data/votes";
+import { votes } from "../data/votesFake";
 
 const POINTS_ORDER = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12];
 

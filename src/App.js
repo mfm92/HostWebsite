@@ -7,6 +7,7 @@ import { entries } from "./data/entries";
 import TabButton from "./components/TabButton";
 import TitleBanner from "./components/TitleBanner";
 import IntermittentBanner from "./components/IntermittentBanner";
+import AnimatedVoteDisplay from "./components/AnimatedVoteDisplay";
 
 // Make this helper outside the App component
 const tabs = [
@@ -103,6 +104,7 @@ export default function App() {
         <SectionsRoutes />
         {/* Only show this banner on results pages */}
         <IntermittentBanner />
+        <AnimatedVoteDisplay />
       </main>
     </Router>
   );

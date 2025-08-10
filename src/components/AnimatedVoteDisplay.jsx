@@ -1,14 +1,49 @@
 // components/AnimatedVoteDisplay.jsx
 
-import { useState, useRef, useCallback, useEffect } from "react";
+import React, { useState, useRef, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
-import { nations as initialNations } from "../data/nations";
+import { entries as initialEntries } from "../data/entries";
 import { votes } from "../data/votes";
 
 const POINTS_ORDER = [1, 2, 3, 4, 5, 6, 7, 8, 10, 12];
 
+function FlagImage({ nation }) {
+  const extensions = ["png", "jpeg", "jpg"];
+  const [extIndex, setExtIndex] = React.useState(0);
+  const [src, setSrc] = React.useState(`/flags/${nation}.${extensions[0]}`);
+
+  React.useEffect(() => {
+    setExtIndex(0);
+    setSrc(`/flags/${nation}.${extensions[0]}`);
+  }, [nation]);
+
+  const handleError = () => {
+    if (extIndex < extensions.length - 1) {
+      const newIndex = extIndex + 1;
+      setExtIndex(newIndex);
+      setSrc(`/flags/${nation}.${extensions[newIndex]}`);
+    } else {
+      setSrc("/flags/Default.png");
+    }
+  };
+
+  return (
+    <img
+      src={src}
+      alt={`${nation} flag`}
+      className="w-full h-full object-cover flag-fade flag-pop"
+      loading="eager"
+      onError={handleError}
+    />
+  );
+}
+
 export default function AnimatedVoteDisplay() {
-  const [nations, setNations] = useState([...initialNations]);
+  const [nations, setNations] = useState(
+    initialEntries
+      .filter(e => e.group.includes("final"))
+      .map(e => ({ ...e, points: e.points ?? 0 })) // ensure points is always 0 if missing
+  );
   const [announcingIndex, setAnnouncingIndex] = useState(0);
   const [announcingCode, setAnnouncingCode] = useState(null);
   const [pendingVote, setPendingVote] = useState(null);
@@ -92,10 +127,9 @@ export default function AnimatedVoteDisplay() {
   const justReceived = pendingVote && pendingVote.recipient ? pendingVote.recipient : null;
   const pointsGiven = pendingVote && pendingVote.recipient ? pendingVote.points : null;
 
-  const sortedNations = nations.slice(0, 24);
-  const col1 = sortedNations.slice(0, 12);
-  const col2 = sortedNations.slice(12, 24);
-
+  const sortedNations = nations.slice(0, 28);
+  const col1 = sortedNations.slice(0, 14);
+  const col2 = sortedNations.slice(14, 28);
   const rankTransitions = getRankTransitions(prevRanks, sortedNations);
 
   function RenderColumn({ nationsList, offset }) {
@@ -159,9 +193,11 @@ export default function AnimatedVoteDisplay() {
               style={{ maxWidth: "100%", willChange: "transform" }}
               className={`w-full min-h-[38px] flex items-center rounded-lg border-2 px-4 py-1.5 ${background} ${highlight} relative overflow-hidden`}
             >
-              <div className="flex flex-row items-center min-w-0 flex-shrink gap-2 w-full">
-                <span className="font-bold text-xl truncate" style={{ width: 48 }}>{nation.code}</span>
-                <span className="text-lg text-gray-200 truncate">{nation.name}</span>
+              <div className="flex flex-row items-center min-w-0 flex-shrink gap-6 w-full">
+                <div className="w-12 h-8 mb-2 rounded-full overflow-hidden shadow-lg ring-2 ring-white/50 flex items-center justify-center bg-white/10 flag-shine">
+                  <FlagImage nation={nation.nation} />
+                </div>
+                <span className="text-lg text-gray-200 truncate">{nation.nation}</span>
               </div>
               <motion.span
                 key={nation.points}
@@ -179,7 +215,7 @@ export default function AnimatedVoteDisplay() {
                   initial={{ opacity: 0, y: -6 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 6 }}
-                  className={`absolute left-1 width-30 top-1 bottom-1 px-4 py-1 text-2xl font-bold rounded transition-shadow shadow-md border z-10
+                  className={`absolute left-1 width-20 top-1 bottom-1 px-4 py-1 text-2xl font-bold rounded transition-shadow shadow-md border z-10
                     ${pointsGiven === 12
                       ? "bg-yellow-500 text-black border-yellow-100 animate-pulse"
                       : "bg-green-600 text-white border-green-200"
@@ -207,7 +243,7 @@ export default function AnimatedVoteDisplay() {
         {announcingCode && (
           <>
             <div className="text-center text-2xl text-orange-400 font-bold tracking-wide px-2">
-              {initialNations.find(n => n.code === announcingCode)?.name}
+              {initialEntries.find(n => n.code === announcingCode)?.name}
             </div>
             <div className="text-base text-orange-300 font-semibold">
               is announcing their votes...

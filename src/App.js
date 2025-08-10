@@ -11,8 +11,6 @@ import VotingInformation from "./components/VotingInformation";
 import AnimatedVoteDisplay from "./components/AnimatedVoteDisplay";
 // Make this helper outside the App component
 const tabs = [
-  { key: "semi1", path: "/semi1", label: "SF1", group: "semi1" },
-  { key: "semi2", path: "/semi2", label: "SF2", group: "semi2" },
   { key: "semi1Results", path: "/semi1-results", label: "SEMI 1 NQ Results", group: "semi1" },
   { key: "semi2Results", path: "/semi2-results", label: "SEMI 2 NQ Results", group: "semi2" },
   { key: "semi1RJResults", path: "/semi1-rj-esults", label: "SEMI 1 RJ NQ Results", group: "semi1" },

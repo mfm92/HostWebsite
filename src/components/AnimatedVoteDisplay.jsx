@@ -237,7 +237,7 @@ export default function AnimatedVoteDisplay() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 flex flex-row gap-10">
+    <div className="max-w-7xl mx-auto p-6 flex flex-row gap-10">
       {/* Scoreboard */}
       <div className="flex-1 flex flex-row gap-8 items-start w-full">
         <RenderColumn nationsList={col1} />
@@ -248,7 +248,10 @@ export default function AnimatedVoteDisplay() {
         {announcingCode && (
           <>
             <div className="text-center text-2xl text-orange-400 font-bold tracking-wide px-2">
-              {initialEntries.find(n => n.code === announcingCode)?.name}
+              {initialEntries.find(n => n.code === announcingCode)?.nation}
+            </div>
+            <div className="w-24 h-16 mb-2 rounded-full overflow-hidden shadow-lg ring-2 ring-white/50 flex items-center justify-center bg-white/10 flag-shine">
+              <FlagImage nation={initialEntries.find(n => n.code === announcingCode)?.nation} />
             </div>
             <div className="text-base text-orange-300 font-semibold">
               is announcing their votes...
